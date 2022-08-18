@@ -16,5 +16,12 @@ A clear and concise description of what you want to happen.
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Acceptance Criteria**
+Create a checklist or scenario-based acceptance criteria, from the users perspective, that answers the following: 
+
+Who will use this feature/enhancement?
+When will they use it?
+How will they use it?
+How will they test it to make sure it's working?
+Is the request achievable? During one sprint? 
+What is your definition of done for this request?
