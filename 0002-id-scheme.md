@@ -10,14 +10,13 @@ informed: corilo, hubin-keio
 ## Context and Problem Statement
 
 Team members need string identifiers (IDs) to associate with data and metadata.
-The problem is to set a scheme for identifers that can be routinely and efficiently minted, exchanged, bound to metadata as part of workflows within a variety of compute and storage enviornments, and ultimately resolved to informative metadata by web services.
+The problem is to set a scheme for identifers that can be routinely and efficiently minted, exchanged, bound to metadata as part of workflows within a variety of compute and storage enviornments, cited, and ultimately resolved to informative metadata by web services.
 
 <!-- This is an optional element. Feel free to remove. -->
 ## Decision Drivers
 
-* {decision driver 1, e.g., a force, facing concern, …}
-* {decision driver 2, e.g., a force, facing concern, …}
-* … <!-- numbers of drivers can vary -->
+* workflows need running, en masse, ASAP, and no one wants to mint bespoke identifiers that they will later need to modify or map to official (resolvable) ones.
+* we want NMDC-stewarded IDs for studies and biosamples rather than using IDs that we do not ourselves resolve, e.g. GOLD identifiers 
 
 ## Considered Options
 
