@@ -1,16 +1,16 @@
 ---
-status: {proposed | rejected | accepted | deprecated | … | superseded by [ADR-0005](0005-example.md)}
-date: {YYYY-MM-DD when the decision was last updated}
-deciders: {list everyone involved in the decision}
-consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
-informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+status: proposed
+date: 2022-11-16
+deciders: cmungall, dwinston, scanon, turbomam, sujaypatil96, mslarae13, pkalita-lbl
+consulted: aclum, elais, emileyfadrosh, kfagnan, lamccue, shreddd, simroux
+informed: corilo, hubin-keio
 ---
-# {short title of solved problem and solution}
+# A regular expression for NMDC identifiers
 
 ## Context and Problem Statement
 
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story.
- You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
+Team members need string identifiers (IDs) to associate with data and metadata.
+The problem is to set a scheme for identifers that can be routinely and efficiently minted, exchanged, bound to metadata as part of workflows within a variety of compute and storage enviornments, and ultimately resolved to informative metadata by web services.
 
 <!-- This is an optional element. Feel free to remove. -->
 ## Decision Drivers
