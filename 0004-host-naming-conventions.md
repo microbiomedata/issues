@@ -24,9 +24,9 @@ Hostnames in the `*.microbiomedata` should have a standard naming pattern in ord
 ## Considered Options
 We would like to capture the service name (data, api, db etc.) and the environment (production, sandbox, dev) in the hostname followed by `microbiomedata.org` For the canonical production host we can drop the environment to make it simpler for public user access
 
-* Using `-` as the separator 
+* `{service}-{env}` with `-` as the separator 
     - eg. `data-sandbox.microbiomedata.org`
-* Using `.` as the separator 
+* `{service}.{env}` with `.` as the separator 
     - eg. `data.sandbox.microbiomedata.org`
     - This introduces a potential extra subdomain in DNS depending on the hosting provider
 
@@ -35,17 +35,18 @@ We will use the following service names for public facing services (This list ca
 * `data` - Data Portal  
 
 We will use the following environment names (This list can be expanded)
-* `prod` - production
+* `prod` - production (optional since this is the user facing instance)
 * `dev` - development 
 * `sandbox` - user facing sandbox 
 
 
 ## Decision Outcome
 
-Chosen option: "Using `-` as the separator", because it allows us to keep names right above the    `.microbiomedata.org` domain simplifying underlying infrastructure management rules. 
+Chosen option: "`{service}-{env}` with `-` as the separator", because it allows us to keep names right above the    `.microbiomedata.org` domain simplifying underlying infrastructure management rules. 
 
-Approve the above list of service and environment names. Services and environments outside this list do not have a prescribed naming convention as yet, but these may be added in the future.
-
+Additional details: 
+* Approve the above list of service and environment names. Services and environments outside this list do not have a prescribed naming convention as yet, but these may be added in the future.
+* `prod` environment name can be dropped if needed for ease of use (eg. `data.microbiomedata.org` instead of `data-prod.microbiomedata.org`)
 
 ### Pros
 - Potentially simplifies wildcard certificate management.
