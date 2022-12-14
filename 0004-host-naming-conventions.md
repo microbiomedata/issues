@@ -2,14 +2,16 @@
 status: proposed
 date: 2022-12-11
 deciders: Shreyas Cholia
-consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
-informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+consulted: Donny Winston, 
+informed: Emiley
+
 ---
+
 # Standardize convention for host names in NMDC
 
 ## Context and Problem Statement
 
-Hostnames in the `*.microbiomedata` should have a standard naming pattern in order to 
+Hostnames in the `*.microbiomedata` DNS namespace should have a standard naming pattern in order to 
 - make it easier for humans to remember endpoints
 - enable automation by using a standard pluggable convention 
 - integrate with underlying kubernetes / rancher platform
@@ -18,6 +20,7 @@ Hostnames in the `*.microbiomedata` should have a standard naming pattern in ord
 ## Decision Drivers
 
 * Restrictions imposed by Spin - Spin has internal names and we would like parity with these if possible
+  * Spin internal names follow the convention of `{service}.{namespace}.{rancher-env}.svc.spin.nersc.org` where we primarily control the host and namespace. We have already been using `-` separator in the service and namespace. eg. data-dev.nmdc-dev.development.svc.spin.nersc.org
 * Provisioning of certificates and ensuring that we retain flexibility in doing so
 * Names supported by cloudflare moving forwards
 
@@ -34,11 +37,14 @@ We will use the following service names for public facing services (This list ca
 * `api` - API service
 * `data` - Data Portal  
 
-We will use the following environment names (This list can be expanded)
-* `prod` - production (optional since this is the user facing instance)
-* `dev` - development 
-* `sandbox` - user facing sandbox 
-
+We will use the following environment names - Not all of these have been deployed (This list can be expanded)
+| Env Name | Description | Status | 
+| -------- | ----------- | ------ |
+| `prod` | Production environment for primary instance of service in the pipeline (optional since this is the user facing instance) | Deployed in Spin Prod | 
+| `dev` | Development environment for internally building new features, data, schemas etc. without impacting production | Deployed in Spin Dev | 
+| `sandbox` | User facing sandbox that allows external users (especially in workshops) to play with system without real live data. | Deployed in Spin Prod | 
+| `test` | Test Environment for internal NMDC developer testing | Future | 
+| `stage` | Allows for previews of new features before launch. Should mirror production environment after launch | Future |   
 
 ## Decision Outcome
 
