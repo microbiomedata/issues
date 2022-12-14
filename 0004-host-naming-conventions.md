@@ -54,6 +54,8 @@ Additional details:
 * Approve the above list of service and environment names. Services and environments outside this list do not have a prescribed naming convention as yet, but these may be added in the future.
 * `prod` environment name can be dropped if needed for ease of use (eg. `data.microbiomedata.org` instead of `data-prod.microbiomedata.org`)
 
+*Comment:* Using the `-` convention mostly avoids adding sub-domains which other tools may have opinions about. For instance we've had trouble with managing extra sub-domains via Cloudflare and some cert authorities are more restrictive about these. But I recognize that this is a little squishy in that everything in the current set up still works with sub-domains. As such this may be more of a defensive choice. 
+
 ### Pros
 - Potentially simplifies wildcard certificate management.
 - Hostname management in the service platform is simpler without the extra sub-domain. Makes future cloudflare deployments more straightforward.
@@ -61,3 +63,6 @@ Additional details:
 
 ### Cons
 - Some existing services deployed under additional subdomains (`nmdc.dev.microbiomedata.org` and `api.dev.microbiomedata.org`) may need new names. 
+- Finegrained Wildcard management of subdomain certs (though it isn't clear we want this)
+
+
