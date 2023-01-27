@@ -1,9 +1,9 @@
 ---
 status: proposed
-date: {YYYY-MM-DD when the decision was last updated}
-deciders: {list everyone involved in the decision}
-consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
-informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+date: 2023-01-26
+deciders: Shreyas Cholia, Chris Mungall
+consulted: Elais, Mike N, Mark M, Patrick K, Alicia, Donny, Jeff, Anastasiya, Set
+informed: Leadership team
 ---
 # Synchronize NMDC Schema Versions across NMDC infrastructure components
 
@@ -52,14 +52,39 @@ This creates a lot of impedence and is holding back rollout of feature updates o
 ## Considered Options
 
 1. Use multiple schema versions in an ad-hoc manner
-    - This will require a lot of manual coordination and conversions. 
+    - **Pros**: 
+        + Components can operate independently 
+    - **Cons**: 
+        + This will require a lot of manual coordination and overhead, not sustainable
 2. Use Schema v3.2 
+    - **Pros**: 
+        + Current version of production so no changes required to data portal or mongo
+    - **Cons**:
+        + Other components are already at newer version of Schema 
 3. Use Schema v7.0
+    - **Pros**: 
+        + Data ingest between Mongo and Postgres tested
+    - **Cons**:
+        + Already behind latest schema release used by other components
 4. Use latest released schema v7.3
+    - **Pros**: 
+        + Allows us to bring all components to a common and latest baseline
+    - **Cons**:
+        + May not support features currently in dev
+        + Will need to institute a process to coordinate future feature upgrades.
 5. Use future release 
+    - **Pros**: 
+        + Allows us to bring all components to a common baseline
+    - **Cons**:
+        + Will require us to wait and we will always be an ongoing concern
 
 ## Decision Outcome
 
-Chosen option: "{title of option 1}", because
-{justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+Chosen option: 4. Use latest released schema v7.3
 
+This option allows us to bring all components to a known, released NMDC schema version.
+We will also institute a process whereby all future NMDC schema releases will be done in coordination with Submission Portal, NMDC Runtime Mongo, Data Portal DB, Workflows. 
+
+Effectively a new schema version will always be accompanied by a coordinated process to release it across the major system components.
+
+We recommend forming a working group or squad to coordinate initial syncing activity, as well as future release management. We may need additional planning around how this group operates.  
