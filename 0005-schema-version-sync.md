@@ -85,6 +85,6 @@ Chosen option: 4. Use latest released schema v7.3
 This option allows us to bring all components to a known, released NMDC schema version.
 We will also institute a process whereby all future NMDC schema releases will be done in coordination with Submission Portal, NMDC Runtime Mongo, Data Portal DB, Workflows. 
 
-Effectively a new schema version will always be accompanied by a coordinated process to release it across the major system components.
+Effectively *a new schema version will always be accompanied by a coordinated process to release it across the major system components.*
 
 We recommend forming a working group or squad to coordinate initial syncing activity, as well as future release management. We may need additional planning around how this group operates.  
