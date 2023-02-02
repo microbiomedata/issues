@@ -22,7 +22,7 @@ NMDC now has a minting service to create NMDC identifiers. This brought up the q
 ## Decision Outcome
 
 Chosen option: "Relax schema validation to allow for a mix of old and new identifiers until after GSP 2023", because it was determined in the NMDC weekly sync that replacing identifiers would not be a trivial exercise and should not be 
-done before GSP 2023 given other prorities. Instead the schema validation rules will be relaxing until after GSP 2023 
+done before GSP 2023 given other prorities. Instead the schema validation rules will be relaxed until after GSP 2023 
 with the majority of staff in favor of reprocessing data which would mint new identifiers instead of an ad hoc, potentially
 error prone process of replacing identifiers in existing records.
 
