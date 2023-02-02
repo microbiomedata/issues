@@ -9,7 +9,7 @@ informed: Leadership team
 
 ## Context and Problem Statement
 
-Currently NMDC schema is not synced across different parts of the infrastructure. 
+Currently (2023-01-31) NMDC schema is not synced across different parts of the infrastructure. 
 * Submission portal - v7.2
 * Mongo DB / Runtime Production - v3.2
 * Prod Data Portal DB (Postgres) - v3.2; 
@@ -33,7 +33,7 @@ This creates a lot of impedence and is holding back rollout of feature updates o
   - Prod Mongo supports version 3.2 (May 2022).
   - Currently python dependency on recent version, but underlying schema use is using older version 3.2
   - Dev DB was tested with an updated dataset w v7.0
-  - 7.3 is required for metaB per Alicia. 
+  - 7.3+ is required for metaB per Alicia. 
 
 * Data Portal Postgres 
   - Currently prod data is at 3.2 
@@ -66,7 +66,7 @@ This creates a lot of impedence and is holding back rollout of feature updates o
         + Data ingest between Mongo and Postgres tested
     - **Cons**:
         + Already behind latest schema release used by other components
-4. Use latest released schema v7.3
+4. Use latest released schema 
     - **Pros**: 
         + Allows us to bring all components to a common and latest baseline
     - **Cons**:
@@ -80,7 +80,8 @@ This creates a lot of impedence and is holding back rollout of feature updates o
 
 ## Decision Outcome
 
-Chosen option: 4. Use latest released schema v7.3
+Chosen option: 4. Use latest released schema 
+(v7.4.4 at the time of writing - exact version will be determined during implementation)
 
 This option allows us to bring all components to a known, released NMDC schema version.
 We will also institute a process whereby all future NMDC schema releases will be done in coordination with Submission Portal, NMDC Runtime Mongo, Data Portal DB, Workflows. 
