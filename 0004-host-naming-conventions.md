@@ -1,5 +1,5 @@
 ---
-status: proposed
+status: accepted
 date: 2022-12-11
 deciders: Shreyas Cholia
 consulted: Donny Winston, 
