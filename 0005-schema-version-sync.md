@@ -88,4 +88,9 @@ We will also institute a process whereby all future NMDC schema releases will be
 
 Effectively *a new schema version will always be accompanied by a coordinated process to release it across the major system components.*
 
+Schema updates that will impact 
+
 We recommend forming a working group or squad to coordinate initial syncing activity, as well as future release management. We may need additional planning around how this group operates.  
+
+**Process:** Schema Updates that impact API and Data Portal should be coordinated using an issue ticket that tags representatives from the NMDC Server, NMDC Runtime and NMDC Schema groups. The issue should only be closed once all affected areas are updated. 
+
