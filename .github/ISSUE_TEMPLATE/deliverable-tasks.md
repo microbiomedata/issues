@@ -8,8 +8,11 @@ assignees: ''
 ---
 
 **Deliverable this task is associated with**
+
+_See Deliverables tab here: https://docs.google.com/spreadsheets/d/1jF1RU_TwQlJpqvHnKk-KieE6VlUv0je4eFddK9idPuE/edit?usp=sharing_
+
 - [Add the Deliverable #]
-- See Deliverables tab here: https://docs.google.com/spreadsheets/d/1jF1RU_TwQlJpqvHnKk-KieE6VlUv0je4eFddK9idPuE/edit?usp=sharing 
+
 
 **RACI**
 
@@ -20,10 +23,10 @@ _Tag people in their roles_
 - Informed:
 
 **Describe the the task?**
-- [What is the task?]
+- [ ] [What are the tasks?]
 
 **Criteria for completion**
-- [What should be happening for us to consider this task compelte?]
+- [What does success look like for this task to be considered complete?]
 
 **Estimate people time**
 - [Hours or days of people time. 1 person, 4 hours]
