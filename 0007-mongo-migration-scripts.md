@@ -2,7 +2,7 @@
 status: accepted
 date: 2023-08-01
 deciders: @eecavanna, @Shalsh23, @shreddd, @turbomam, @dwinston
-consulted: 
+consulted: (same as `deciders`)
 informed: All existing `nmdc-schema` and `nmdc-runtime` contributors
 ---
 # Mongo schema changes will always be accompanied by data migration scripts
