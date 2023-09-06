@@ -9,7 +9,7 @@ assignees: ''
 
 **Deliverable this task is associated with**
 
-_See Deliverables tab here: https://docs.google.com/spreadsheets/d/1jF1RU_TwQlJpqvHnKk-KieE6VlUv0je4eFddK9idPuE/edit?usp=sharing_
+_See Deliverables tab here: _
 
 - [Add the Deliverable #]
 
