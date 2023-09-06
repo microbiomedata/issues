@@ -22,7 +22,7 @@ _Tag people in their roles_
 - Consulted:
 - Informed:
 
-**Describe the the task?**
+**Describe the the task**
 - [ ] [What are the tasks?]
 
 **Criteria for completion**
@@ -38,5 +38,5 @@ _Tag people in their roles_
 - Start:
 - End:
 
-**Tag Blocker/Contingent upon isues**
+**Tag Blocker/Contingent upon issues**
 - [Tagg issues]
