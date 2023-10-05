@@ -1,0 +1,36 @@
+---
+status: proposed
+date: 2023-10-04
+deciders: Shreyas Cholia, Eric Cavanna
+consulted: 
+informed: Emiley Eloe-Fadrosh
+---
+# NMDC Spin Outage Plan
+
+## Context and Problem Statement
+We need to have an approach to managing NERSC Spin outages for the NMDC websites. 
+
+### Additional Context 
+1. As a preliminary step we moved NMDC web sites into cloudflare (Eric Cavanna and Shreyas Cholia have access) - this gives us more control over DNS and outage management options. 
+2. NMDC has a backup instance of data portal at EMSL - https://data-microbiomedata.emsl.pnnl.gov/
+3. We have setup an outage page via github pages at status.microbiomedata.org | GH https://github.com/microbiomedata/nmdc-status-website
+
+## Considered Options
+
+1. Point DNS in cloudflare at status.microbiomedata.org outage page via proxy
+2. Use Cloudflare Page Rules to set up (temporary 304) redirect rules for services pointing at status.microbiomedata.org
+3. Use cloudflare error pages to create a custom 500 page within cloudflare
+
+## Decision Outcome
+
+Chosen option: 2.  Use Cloudflare Page Rules to set up redirect 
+
+### Justification:
+- Option 2. provides us with a common approach for multiple NMDC hosts with minimal configuration. All outage pages are redirected to the status page when we are down
+- Thet temporary redirect does not impact SEO / page rank algorithms
+- Provides more control during outages in terms of when we want to switch over. 
+
+### Rejected Options
+- Option 1. is tricky because of CNAME proxies and would be difficult to set up for multiple hosts
+- Option 3. gives us less control over the actual outage and depends on the backend returning a 500. 
+
