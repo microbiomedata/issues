@@ -2,7 +2,7 @@
 status: proposed
 date: 2023-10-04
 deciders: @shreddd, @eecavanna
-consulted: 
+consulted: None
 informed: @emileyfadrosh
 ---
 # NMDC Spin Outage Plan
