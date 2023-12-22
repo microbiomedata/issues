@@ -10,16 +10,19 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who i
 ## Decisions Made and Implemented
 * Class:OmicsProcessing will be removed
   * All reference to Class:OmicsProcessing should be eliminated from NMDC schema & Workflows
+  * Typecode `omprc` will still be valid for Class:DataGeneration
 * Class:DataGeneration will be created and take the place of Class:OmicsProcessing
 * Class:PlannedProcess will be created as a root class
   * Class:MaterialProcessing will be created and be a subclass of Class:PlannedProcess
   * Class:WorkflowExecution will replace Class:WorkflowExecutionActivity and will be a subclass of Class:PlannedProcess
 * All 'Activity' classes are now of Class:PlannedProcess, and the word "Activity" will be removed
+* The output of any subclasses of Class:MaterialProcessing will have an output of ProcessedSample
 * To group subclasses of Class:WorkflowExecution into implemented steps, Class:WorkflowChain was created.
   * This also provides clear connection back to the DataGeneration output, using was_informed_by
     * was_informed_by is being removed from Class:WorkflowExecution
   * Any implementation of Class:WorkflowExecution will use Class:WorkflowChain. Even when it's a single linked chain (ie implementation of a single subclass of Class:WorkflowExecution)
 * Class:WorkflowExecution will provide part_of with Range:Class:WorkflowChain
+  * This replaces 'used' and will no longer be on Class:WorkflowExecution
 * Output from WorkflowExecution will always have slot:data_category: processed_data of Class:DataObject 
 * Class:DataGeneration will detail the process of inputting a material sample (Biosample or ProcessedSample, some MaterialEntity) into an instrument and generating data (output)
   * Instrument data will be denoted using slot:data_category on Class:DataObject.
@@ -40,8 +43,15 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who i
 * ##schema support for unhappy paths for OmicsProcessing #1144##
 * Subclasses will have their own typecodes. While this may mean that eventually, if classes are renamed, typecodes might not make sense.
 * Reciprocal or redundant relationship slots (has_part + part_of, was_informed_by + used) will not be used. Only single direction should be provided
+* 'type' should only appear in the NMDC scheam as a slot on a class.
+* All classes should have a 'type' slot with Range:CURIe and designates_type = True
+  * slot: type should have a range of the class they are #need Mark to confirm this is worded correctly
+* Linking a protocol to a Class:MaterialProcess subclass can happen at the individual class level, or at the aggregation of processes via the Class:ProtocolExecution
+* 
 
-* Stopped at Deprecate chimera_check slot in the list
+* Ask Anastasiya about ProtocolExecution
+* 
+* stopped at Add catalyzed_by slot and create Class:Enzymne for Range. #15
 
 
 
