@@ -58,91 +58,31 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who i
 * All classes should have `slot:type` with `Range:CURIe` and `designates_type = True`
   * `slot:type` should have a range of the class they are #need Mark to confirm this is worded correctly
 
-
-
-
-
-
-
-
+### In Progress
 * ##Add gold_analysis_project_identifiers and (new) jgi_analysis_project_identifiers to WorkflowChain #1123##
 * ##schema support for unhappy paths for OmicsProcessing #1144##
-
-
 * Ask Anastasiya about ProtocolExecution
-* 
 * stopped at Add catalyzed_by slot and create Class:Enzymne for Range. #15
-
-
-
 
 ## Context and Problem Statement
 
 The NMDC schema was originally built providing one place, Class:OmicsProcessing, for capturing a wide variety of metadata fields. With expansion of data types and required metadata fields it was identified as being overloaded and requiring additional modeling.
 
-This ADR will provide the decisions that were made leading up to and during the refactoring process to better capture metadata and describe samples and analyses.
+This ADR provides the decisions that were made leading up to and during the refactoring process to better capture metadata and describe samples and analyses.
 
 <!-- This is an optional element. Feel free to remove. -->
 ## Decision Drivers
 
-* {decision driver 1, e.g., a force, facing concern, …}
-* {decision driver 2, e.g., a force, facing concern, …}
-* … <!-- numbers of drivers can vary -->
+* Subject matter experts, schema leaders, and modelers met and discussed all decisions above. 
+* Need for expanded and improved modeling
 
-## Considered Options
-
-* {title of option 1}
-* {title of option 2}
-* {title of option 3}
-* … <!-- numbers of options can vary -->
-
-## Decision Outcome
-
-Chosen option: "{title of option 1}", because
-{justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
-
-<!-- This is an optional element. Feel free to remove. -->
 ### Consequences
 
-* Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
-* Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
-* … <!-- numbers of consequences can vary -->
+* Major data migration required
+* Workflow updates required
+* Data portal ingest code updates required
+* Improves data representation
+* Improves workflows and automation
 
-<!-- This is an optional element. Feel free to remove. -->
-## Validation
-
-{describe how the implementation of/compliance with the ADR is validated. E.g., by a review or an ArchUnit test}
-
-<!-- This is an optional element. Feel free to remove. -->
-## Pros and Cons of the Options
-
-### {title of option 1}
-
-<!-- This is an optional element. Feel free to remove. -->
-{example | description | pointer to more information | …}
-
-* Good, because {argument a}
-* Good, because {argument b}
-<!-- use "neutral" if the given argument weights neither for good nor bad -->
-* Neutral, because {argument c}
-* Bad, because {argument d}
-* … <!-- numbers of pros and cons can vary -->
-
-### {title of other option}
-
-{example | description | pointer to more information | …}
-
-* Good, because {argument a}
-* Good, because {argument b}
-* Neutral, because {argument c}
-* Bad, because {argument d}
-* …
-
-<!-- This is an optional element. Feel free to remove. -->
 ## More Information
 
-{You might want to provide additional evidence/confidence for the decision outcome here and/or
- document the team agreement on the decision and/or
- define when this decision when and how the decision should be realized and if/when it should be re-visited and/or
- how the decision is validated.
- Links to other decisions and resources might here appear as well.}
