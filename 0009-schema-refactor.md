@@ -47,6 +47,7 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who i
 * Output from `WorkflowExecution` will always have a value on `slot:data_category` of `processed_data` of `Class:DataObject`
 * `slot:analyte_category` will be used to inform the type of data that is being generated and can be instantiated on `Class:DataGeneration` and `Class:WorkflowChain`
   * `slot:omics_type` will be removed and replaced with `slot:analyte_category` to denote the type of data generated.
+* Add slot gold_analysis_project_identifiers and (new) jgi_analysis_project_identifiers to `Class:WorkflowChain`
 
 ### Other
 * `Class:DataObject` will NOT have subclasses. Rather, it will have `slot:data_category` which has a range `DataCategoryEnum`
@@ -59,8 +60,8 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who i
   * `slot:type` should have a range of the class they are #need Mark to confirm this is worded correctly
 
 ### In Progress
-* ##Add gold_analysis_project_identifiers and (new) jgi_analysis_project_identifiers to WorkflowChain #1123##
-* ##schema support for unhappy paths for OmicsProcessing #1144##
+* schema support for unhappy paths for OmicsProcessing, need to finalize directionality of parthood #1144
+* Determine if workflows team or runtime creates WorkflowChain.
 * Ask Anastasiya about ProtocolExecution
 * stopped at Add catalyzed_by slot and create Class:Enzymne for Range. #15
 
