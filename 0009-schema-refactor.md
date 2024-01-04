@@ -20,9 +20,14 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who i
 * `Class:ChemicalConversionProcess` will replace `Class:ReactionProcess`
 * `Class:BiosampleProcessing` will be removed. Subclasses of `Class:MaterialProcessing` will replace what was captured. 
 * Linking a protocol to a `Class:MaterialProcess` subclass can happen at the individual class level, or at the aggregation of processes via the `Class:ProtocolExecution`
+* `slot:catalyzed_by` is instantiated on `Class:ChemicalConversionProcess` with `Range:Class:Solution`.
+  * `Class:Solution` has `slot:has_solution_components` with `Range:Class:SolutionComponent` where `slot:compound` has `Range:Class:ProteolyticEnzymeEnum`.
+  * `slot:catalyzed_by` will capture any substrate or enzyme that was used to facilitate a chemical conversion process. 
+  * Enzymes that can be used as catalysts are available in the `Class:ProteolyticEnzymeEnum`.
+  * The `slot:catalyzed_by` will be referenced by proteomics workflows.
 
 ### Class:DataGeneration
-* * `Class:DataGeneration` will be created and take the place of Class:OmicsProcessing
+* `Class:DataGeneration` will be created and take the place of `Class:OmicsProcessing`
 * `Class:OmicsProcessing` will be removed
   * All reference to `Class:OmicsProcessing` should be eliminated from NMDC schema & Workflows
   * Typecode `omprc` will still be valid for `Class:DataGeneration`
@@ -33,7 +38,10 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who i
   * This allows for the expansion of additional data types as NMDC grows
 * `slot:instrument_used` will have `Range:Class:Instrument`
   * `Class:Instrument` will have separate enumerated slots for `vendor` and `model`
-  * `slot:id` will be the identifier of the `instrument_used` and `vendor` and `model` will NOT be inlined for `Class:DataGeneration`. Rather, it will be inferred / traced using the instrument's id. ## Confirm this ##
+  * `slot:id` will be the identifier of the `instrument_used` and `vendor` and `model` will NOT be inlined for `Class:DataGeneration`. Rather, it will be inferred / traced using the instrument's id.
+* Schema support for complex paths of data generation and data processing.
+  * `Class:DataGeneration` can have instances where a single sample has multiple data files that need processed together during WorkflowExecution.  
+  * Relationships between samples and the data objects will be captured using `slot:part_of`, linking the 'child' back to the 'parent'.
 
 ### Class:WorkflowExecution & Class:WorkflowChain
 * `Class:WorkflowExecution` will be a subclass of `Class:PlannedProcess`
@@ -47,23 +55,22 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who i
 * Output from `WorkflowExecution` will always have a value on `slot:data_category` of `processed_data` of `Class:DataObject`
 * `slot:analyte_category` will be used to inform the type of data that is being generated and can be instantiated on `Class:DataGeneration` and `Class:WorkflowChain`
   * `slot:omics_type` will be removed and replaced with `slot:analyte_category` to denote the type of data generated.
-* Add slot gold_analysis_project_identifiers and (new) jgi_analysis_project_identifiers to `Class:WorkflowChain`
+* `slot:gold_analysis_project_identifiers` and `slot:jgi_analysis_project_identifiers` will be included on `Class:WorkflowChain`
 
 ### Other
 * `Class:DataObject` will NOT have subclasses. Rather, it will have `slot:data_category` which has a range `DataCategoryEnum`
+* `slot:data_object_type` will be renamed to `slot:data_object_category`. 
 * Slots associated with `Class:Biosample` or `Class:OmicsProcessing` that were incorrectly associated, were removed and added to more appropriate classes. (ex: `slot:pcr_primers` was removed from `Class:Biosample` and added to the new `Class:LibraryPrep`)
 * `Class:Reaction` will renamed to `Class:BiochemicalReaction` for clarity between this class and `Class:ChemicalConversionProcess`.
 * Subclasses will have their own typecodes.
   * This may mean that eventually, if classes are renamed, typecodes might not make sense.
 * Reciprocal or redundant relationship slots (`has_part` + `part_of`, `was_informed_by` + `used`) will not be instantiated. Only a single direction should be provided.
-* All classes should have `slot:type` with `Range:CURIe` and `designates_type = True`
-  * `slot:type` should have a range of the class they are #need Mark to confirm this is worded correctly
+* All classes should have `slot:type` with `Range:CURIE` and `designates_type = True`
+  * `slot:type` should have a range of the class they are.
 
 ### In Progress
-* schema support for unhappy paths for OmicsProcessing, need to finalize directionality of parthood #1144
-* Determine if workflows team or runtime creates WorkflowChain.
-* Ask Anastasiya about ProtocolExecution
-* stopped at Add catalyzed_by slot and create Class:Enzymne for Range. #15
+* When/how will instances of Class:WorkflowChain be created?
+  * By the workflows team, or by NMDC runtime?
 
 ## Context and Problem Statement
 
