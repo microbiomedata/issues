@@ -1,9 +1,9 @@
 ---
-status: proposed {proposed | rejected | accepted | deprecated | … | superseded by [ADR-0005](0005-example.md)}
-date: 2023-12-19{YYYY-MM-DD when the decision was last updated}
-deciders: Chris Mungall, Lee Ann {list everyone involved in the decision}
-consulted: Anastasiya Prymolenna, Brynn Zalmanek, James Tessmer, Montana Smith, Sam Purvine, Yuri Corilo, Mark Miller, Michael Thorton, Alicia Clum, Mark Miller    {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
-informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+status: accepted 
+date: 2023-12-19
+deciders: Chris Mungall, Lee Ann 
+consulted: Anastasiya Prymolenna, Brynn Zalmanek, James Tessmer, Montana Smith, Sam Purvine, Yuri Corilo, Mark Miller, Michael Thorton, Alicia Clum, Mark Miller    
+informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna 
 ---
 # Schema Refactoring: Monterey//Berkeley
 
@@ -78,7 +78,6 @@ The NMDC schema was originally built providing one place, Class:OmicsProcessing,
 
 This ADR provides the decisions that were made leading up to and during the refactoring process to better capture metadata and describe samples and analyses.
 
-<!-- This is an optional element. Feel free to remove. -->
 ## Decision Drivers
 
 * Subject matter experts, schema leaders, and modelers met and discussed all decisions above. 
