@@ -2,7 +2,7 @@
 status: accepted 
 date: 2023-12-19
 deciders: Chris Mungall, Lee Ann McCue
-consulted: Anastasiya Prymolenna, Brynn Zalmanek, James Tessmer, Montana Smith, Sam Purvine, Yuri Corilo, Mark Miller, Michael Thorton, Alicia Clum, Mark Miller    
+consulted: Anastasiya Prymolenna, Brynn Zalmanek, James Tessmer, Montana Smith, Sam Purvine, Yuri Corilo, Mark Miller, Michael Thorton, Alicia Clum  
 informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna 
 ---
 # Schema Refactoring: Monterey/Berkeley
