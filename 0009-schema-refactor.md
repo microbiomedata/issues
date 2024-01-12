@@ -38,7 +38,7 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna
   * This allows for the expansion of additional data types as NMDC grows.
 * `slot:instrument_used` will have `Range:Class:Instrument`.
   * `Class:Instrument` will have separate enumerated slots for `vendor` and `model`.
-  * `slot:id` will be the identifier of the `instrument_used`; `vendor` and `model` will NOT be inlined for `Class:DataGeneration`. Rather, it will be inferred / traced using the instrument's id.
+  * `slot:id` will be the identifier of the `instrument_used`; `vendor` and `model` will NOT be inlined for `Class:DataGeneration`. Rather, they will be inferred / traced using the instrument's id.
 * Schema support was added for complex paths of data generation and data processing.
   * `Class:DataGeneration` can have instances where a single sample has multiple data files that need processed together during WorkflowExecution.  
   * Relationships between samples and the data objects will be captured using `slot:part_of`, linking the 'child' back to the 'parent'.
