@@ -53,7 +53,7 @@ informed: Emiley Eloe-Fadrosh, Shreyas Cholia, Eric Cavanna
 * `Class:WorkflowExecution` will provide `part_of` with `Range:Class:WorkflowChain`.
   * This replaces 'used' and will no longer be on `Class:WorkflowExecution`.
 * Output from `WorkflowExecution` will always have the value `processed_data` in `slot:data_category` of `Class:DataObject`.
-* `slot:analyte_category` will be used to inform the type of data that is being generated and can be instantiated on `Class:DataGeneration` and `Class:WorkflowChain`.
+* `slot:analyte_category` will be used to inform the type of data that is being generated. This slot can exist on `Class:DataGeneration` and `Class:WorkflowChain`.
   * `slot:omics_type` will be removed and replaced with `slot:analyte_category` to denote the type of data generated.
 * `slot:gold_analysis_project_identifiers` and `slot:jgi_analysis_project_identifiers` will be included on `Class:WorkflowChain`.
 
