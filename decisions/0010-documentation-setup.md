@@ -16,12 +16,12 @@ We would like to simplify the process to avoid extra steps and duplicate docs.
 ## Considered Options
 
 1. Existing approach - run a build script that scrapes the docs from nmdc-schema and nmdc-workflows and adds it to NMDC_Documentation
-2. Link out to the documentation pages from other repos, so that users are directly pointed at the current docs managed by those repos. Note that we may need to consider what we want to do with the previous version of the pages (pre link-out) in the NMDC_Documentation repo. 
+2. Link out to the documentation pages for other repos, so that users are directly pointed at the current docs managed by those repos. Note that we may need to consider what we want to do with the previous version of the pages (pre link-out) in the NMDC_Documentation repo. 
 
 
 ## Decision Outcome
 
-* Chosen option: 2. Link Out to repo specific docs. This allows us to lower the maintenance and update, and we can always point to current documentation.
+* Chosen option: 2. Link Out to repo specific docs. This allows us to lower the maintenance and update (no extra build step for updates, no duplication), and we always point to current documentation.
 
 [ Include Diagram ] 
 
