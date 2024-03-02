@@ -35,8 +35,8 @@ graph BT;
 
     workflow_doc_src --> | RTD Pull & Build | workflow_doc_dist
     schema_doc_src --> | GHA Build & Push | schema_doc_dist
-    workflow_doc_src --> | Scripted build & merge | core_doc_src
-    schema_doc_src --> | Scripted build & merge | core_doc_src
+    workflow_doc_src --> | Scripted Build & Merge | core_doc_src
+    schema_doc_src --> | Scripted Build & Merge | core_doc_src
     
     subgraph "GH repo: workflow_documentation"
         workflow_doc_src["Workflow docs MD/RST"]
