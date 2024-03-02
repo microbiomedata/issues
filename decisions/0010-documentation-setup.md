@@ -26,7 +26,7 @@ title: The merger script approach
 ---
 graph BT;
     subgraph "GH repo: NMDC_Documentation repo"
-        core_doc_src["Core docs MD/RST"]
+        core_doc_src["Core+Schema+Workflow docs MD/RST"]
     end
 
     subgraph "GH repo: nmdc-schema"
