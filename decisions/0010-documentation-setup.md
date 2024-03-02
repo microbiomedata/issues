@@ -51,7 +51,7 @@ graph BT;
     end
 
     subgraph "RTD project: nmdc-documentation"
-        main_doc_dist["Core docs HTML"]
+        main_doc_dist["Core+Schema+Workflow docs HTML"]
     end
 
     core_doc_src --> | RTD Pull & Build | main_doc_dist
