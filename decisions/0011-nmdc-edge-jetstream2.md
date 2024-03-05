@@ -35,9 +35,9 @@ is no guarantee that the newer backend will be ready for use by then.
 
 ## More Information
 We will be using the Jetstream2 platform to create a virtual cluster that will run NMDC-EDGE workflows. The virtual
-cluster will consist of a head node and one or more worker nodes that will run the workflows. Each of these nodes will
+cluster will consist of a head node running Slurm that controls one or more worker nodes that will run the workflows. Each of these nodes will
 run in its own VM. The NMDC-EDGE website will be running on a separate virtual machine along with Cromwell, MongoDB and MySQL.  
 When users submit a new workflow, Cromwell will submit sbatch scripts to the slurm scheduler running on the virtual 
 cluster. These jobs will then be executed on the worker nodes. Cromwell will monitor the jobs running on the worker
 nodes and copy the output to the website VM when they finish running. We will use Magic Castle to create
-a shard storage system for Cromwell and the virtual cluster
+a shared storage system that Cromwell and the nodes in the virtual cluster can access.
