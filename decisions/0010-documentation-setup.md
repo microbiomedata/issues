@@ -1,5 +1,5 @@
 ---
-status: { proposed }
+status: { accepted }
 date: 2024-03-01
 deciders: Shreyas, Eric, Mark M., Yan, Sierra, Donny
 consulted:
