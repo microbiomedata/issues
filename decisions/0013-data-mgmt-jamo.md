@@ -25,7 +25,7 @@ with scripts to back things up to HPSS.
 
 Use JAMO to handle data managament lifecycle needs (option 3). 
 
-We need something in short order to avoid having a commonly writable area for NMDC data at NERSC (that serves both web and workflows), and JAMO meets our base requirements. Since the EMSL data management setup is sufficiently different this may not apply there, but we can investigate integration in the future. 
+We need something in short order to avoid having a commonly writable area for NMDC data at NERSC (that serves both web and workflows) and an automated backup / data management system that acts as the source of truth. JAMO meets our base requirements. Since the EMSL data management setup is sufficiently different this may not apply there, but we can investigate integration in the future. 
 
 ### Pros
 - JAMO is already a production service utilized by JGI that we can take advantage of
