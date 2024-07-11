@@ -2,4 +2,6 @@
 
 This repo is for logging and managing issues in the NMDC repo. To log an issue go [here](https://github.com/microbiomedata/issues/issues). 
 
-Decisions are tracked as [ADRs](https://adr.github.io/) in the [decisions](decisions/) subdirectory
+Decisions are tracked as [ADRs](https://adr.github.io/) in the [decisions](./decisions/) directory.
+
+Tools related to managing issues are located in the [tools](./tools/) directory.
