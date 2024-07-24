@@ -26,13 +26,13 @@ Before creating a label at the repo level, check whether a similar label already
 
 When creating a label, **include a description** that you think will make sense to the other people that use that repository. That can make it more likely that team members (including your future self) share a common interpretation of the label.
 
-For example, the label `big` could be interpreted as "Going to take a lot of time", "Involves a lot of data", "involves something that happens to be abbreviated as B.I.G.; BioInformatics Group", etc. In that case, a disambiguating description could be "Impacts the bioinformatics group".
+For example, the label `big` could be interpreted as "Going to take a lot of time", "Involves a lot of data", "Involves something that happens to be abbreviated as B.I.G., such as the BioInformatics Group", etc. Given those potential interpretations, a disambiguating description could be "Impacts the bioinformatics group".
 
 ## Creating issues
 
 ### Including code snippets
 
-When copy/pasting a code snippet into the issue description, wrap it in a code fence. That can make it easier for people to read.
+When copy/pasting a code snippet into the issue description, wrap it in a [code fence](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks). That can make it easier for people to read.
 
 <table>
 <tr>
@@ -82,6 +82,8 @@ You can achieve the rightmost version by wrapping the raw code with this (withou
   }
 + ```
 ```
+
+Alternatives to `json` include `py` (short for Python), `Makefile`, `yaml`, and all the other language identifiers [listed here](https://github.com/github-linguist/linguist/blob/master/lib/linguist/languages.yml).
 
 ### Creating an umbrella issue/meta issue
 
