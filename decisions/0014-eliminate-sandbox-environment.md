@@ -2,7 +2,7 @@
 status: accepted
 date: 2024-08-14
 deciders: Montana Smith, NMDC PIs, Mike Nagler, Patrick Kalita 
-consulted: All NMDC team members—via [GitHub discussion](https://github.com/microbiomedata/issues/discussions/743), meetings, and Slack —were given the opportunity to express their opinions
+consulted: All NMDC team members—via GitHub Discussion, meetings, and Slack —were given the opportunity to express their opinions
 ---
 # Eliminating the NMDC Submission Portal sandbox environment
 
