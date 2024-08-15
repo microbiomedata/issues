@@ -6,7 +6,7 @@ consulted: All NMDC team membersâ€”via GitHub Discussion, meetings, and Slack â€
 ---
 # Eliminating the NMDC Submission Portal sandbox environment
 
-This ADR outlines the process we used to decide to eliminate the NMDC Sandbox Submission Portal, the decision that was made, and the planned updated to ensure functionality is maintained. 
+This ADR outlines the process we used to decide to eliminate the NMDC Sandbox Submission Portal, the decision that was made, and the planned updates to ensure functionality is maintained. 
 
 ## Context and Problem Statement
 
