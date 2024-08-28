@@ -27,61 +27,26 @@ To ensure interoperability and consistancy, the NMDC General Query will be ammen
 - No environment specific query should be "cherry picked". Rather any filtering should be accomplished as a general query. (Example, will not remove a specific term by ID, but rather identify what is the rule that can be created to fit a overall need.)
 
 NMDC General Query
-- `env_broad_scale` will terms that branch from be from biome [ENVO:00000428]
-We will’ evaluate what is lost when ecosystem is excluded and determine what needs “re-added” or requested of envo
-Env_loca_scale will be material entity - biome - environmental material & narrowed from there. See 3.ii above
-Env_medium will be environmental material
-For SOIL extension specifically
-Env_broad_scale will be biome - aquatic biome then human reviewed
-Split leaf nodes & non-leaf nodes.
-Review these lead and non-leaf nodes for elimination.
-Expect leaf nodes to be removed.
-Env_local_scale, see 3.ii above
-Env_medium will be all environmental materials with soil or soils in their name or description. Possible stemming if needed.
+- `env_broad_scale` will be composed of terms that branch from biome [ENVO:00000428]
+  - We will then evaluate what is lost when ecosystem is excluded and determine what needs “re-added” or requested of envo
+- `env_local_scale` will be composed of terms that branch from material entity [BFO:0000040], excluding biome [ENVO:00000428] & environmental material [ENVO:00010483]
+  - Additional narrowing will occur to remove specific branches. 
+- `env_medium` will be composed of terms that branch from environmental material [ENVO:00010483]
 
+For **soil** environment (MIxS Extension)
+- `env_broad_scale` will exclude aquatic biome
+  - Included terms will be separated into leaf nodes & non-leaf nodes & evaluated manually and additional query changes will be made as needed.
+  - Expectation is that lead nodes will be removable.
+- `env_local_scale` ????? TBC
+- `env_medium` will be textually filtered for classes with soil or soils in their name or description.
+  - Will evaluate if adding stemming is needed.
 
-<!-- This is an optional element. Feel free to remove. -->
-### Consequences
+Following these initial queries and human evaluation, this ADR will be updated. 
 
-* Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
-* Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
-* … <!-- numbers of consequences can vary -->
-
-<!-- This is an optional element. Feel free to remove. -->
-## Validation
-
-{describe how the implementation of/compliance with the ADR is validated. E.g., by a review or an ArchUnit test}
-
-<!-- This is an optional element. Feel free to remove. -->
-## Pros and Cons of the Options
-
-### {title of option 1}
-
-<!-- This is an optional element. Feel free to remove. -->
-{example | description | pointer to more information | …}
-
-* Good, because {argument a}
-* Good, because {argument b}
-<!-- use "neutral" if the given argument weights neither for good nor bad -->
-* Neutral, because {argument c}
-* Bad, because {argument d}
-* … <!-- numbers of pros and cons can vary -->
-
-### {title of other option}
-
-{example | description | pointer to more information | …}
-
-* Good, because {argument a}
-* Good, because {argument b}
-* Neutral, because {argument c}
-* Bad, because {argument d}
-* …
-
-<!-- This is an optional element. Feel free to remove. -->
 ## More Information
 
-{You might want to provide additional evidence/confidence for the decision outcome here and/or
- document the team agreement on the decision and/or
- define when this decision when and how the decision should be realized and if/when it should be re-visited and/or
- how the decision is validated.
- Links to other decisions and resources might here appear as well.}
+Referece the squad meeting notes.
+https://github.com/microbiomedata/issues/issues/468
+https://github.com/microbiomedata/issues/issues/840
+https://github.com/microbiomedata/issues/issues/841
+https://github.com/microbiomedata/issues/issues/877
