@@ -27,7 +27,7 @@ To ensure interoperability and consistancy, the NMDC General Query will be ammen
 - No environment specific query should be "cherry picked". Rather any filtering should be accomplished as a general query. (Example, will not remove a specific term by ID, but rather identify what is the rule that can be created to fit a overall need.)
 
 NMDC General Query
-- `env_broad_scale` will terms that branch from be from ‘biome’ only.
+- `env_broad_scale` will terms that branch from be from biome [ENVO:00000428]
 We will’ evaluate what is lost when ecosystem is excluded and determine what needs “re-added” or requested of envo
 Env_loca_scale will be material entity - biome - environmental material & narrowed from there. See 3.ii above
 Env_medium will be environmental material
