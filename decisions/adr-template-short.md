@@ -1,9 +1,10 @@
 ---
-status: {proposed | rejected | accepted | deprecated | … | superseded by [ADR-0005](0005-example.md)}
-date: {YYYY-MM-DD when the decision was last updated}
-deciders: {list everyone involved in the decision}
-consulted: {list everyone whose opinions are sought (typically subject-matter experts); and with whom there is a two-way communication}
-informed: {list everyone who is kept up-to-date on progress; and with whom there is a one-way communication}
+# Update these YAML values so they describe this decision. Delete the leading `→` characters.
+status: → proposed | rejected | accepted | deprecated | … | superseded by [ADR-00XX](./0001-improve-connection-between-home-page-and-products.md)
+date: → YYYY-MM-DD indicating when the decision was last updated
+deciders: → list everyone involved in the decision
+consulted: → list everyone whose opinions are sought (typically, subject matter experts); and with whom there is two-way communication
+informed: → list everyone who is kept up-to-date on progress; and with whom there is one-way communication
 ---
 # {short title of solved problem and solution}
 
