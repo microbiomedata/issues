@@ -89,6 +89,7 @@ For **soil** environment (MIxS Extension)
         - stemming with the pattern 'ferment' could be used to remove terms with fermented or fermenting in their labels
 
 This ADR will be updated following the evaluation of these initial queries, followed by human review and voting.
+* This evaluation was completed by the authors of this PR and the members of the NMDC's "Env Triad Squad"
 
 ## More Information
 
