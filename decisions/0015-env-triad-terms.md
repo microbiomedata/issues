@@ -74,9 +74,7 @@ columns, like 'is_biome' or 'is_environmental_material'.
   and [environmental material [ENVO:00010483]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00010483)
     - It's expected that additional branches of the is_a hierarchy will subtracted,
       like [chemical entity [CHEBI:24431]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI_24431)
-    - The possibility of subtracting leaf nodes is under consideration. Since we are programmatically building candidate
-      tables with multiple forms of evidence, the smaller query result offered by subtraction may not be of much added
-      benefit
+    
     - Subtraction over relationships other than is_a, subtraction of classes based on substrings in their labels, or
       other targets subtraction are possible, but may also be of limited benefit
  
