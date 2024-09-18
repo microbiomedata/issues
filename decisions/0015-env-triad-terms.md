@@ -89,7 +89,6 @@ For **soil** environment (MIxS Extension)
 
 - `env_broad_scale` will
   exclude [aquatic biome [ENVO:00002030]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00002030)
-    - See comments about the cost and benefits of excluding leaf nodes above
 - `env_local_scale` ????? TBC
 - `env_medium`
     - Subclass hierarchy-based exclusion _could_ also be used here, for
