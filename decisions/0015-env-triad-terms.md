@@ -79,10 +79,7 @@ columns, like 'is_biome' or 'is_environmental_material'.
       benefit
     - Subtraction over relationships other than is_a, subtraction of classes based on substrings in their labels, or
       other targets subtraction are possible, but may also be of limited benefit
-    - @turbomam
-      has [prototyped these workflows in Makefiles](https://github.com/microbiomedata/external-metadata-awareness/blob/main/Makefiles/soil-env_local_scale.Makefile).
-      @sierra-moxon will explore options for making the workflows more accessible to the whole group, with a single
-      application that takes a single configuration file, or with (a) Jupyter notebook(s)
+ 
 - `env_medium` will consist of subclasses environmental material [ENVO:00010483]
 
 For **soil** environment (MIxS Extension)
