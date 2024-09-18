@@ -54,7 +54,7 @@ of the environments (MIxS Extensions), and will be reflected in either query-spe
 columns, like 'is_biome' or 'is_environmental_material'.
 
 - This ADR will be updated as environment-specific queries are created.
-- The logic described above is intended to minimize cherry-picking of values for the sets, but individual squad members
+- The logic described above is intended to minimize cherry-picking of values for the sets.
   will be given the opportunity to add their own `Y` or `N` votes for each value in the tables. It may be possible to
   feed the insights from these votes back into reusable logic, but that might require complex OAK queries over
   inconsistent annotations, or grouping of values within a semantic embedding space. For example, there may be evidence
