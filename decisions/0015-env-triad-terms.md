@@ -56,9 +56,7 @@ columns, like 'is_biome' or 'is_environmental_material'.
 - This ADR will be updated as environment-specific queries are created.
 - The logic described above is intended to minimize cherry-picking of values for the sets.
 - Any filtering should be accomplished as a general query. For example, we will not remove a specific term, but rather identify a rule that accounts for more general needs.
-- Expert review will be done on an initial list of accepted terms. Insights from review will be fed back into reusable logic, which that might require complex OAK queries. over
-  inconsistent annotations, or grouping of values within a semantic embedding space. For example, there may be evidence
-  that [farm [ENVO:00000078]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00000078),
+- Expert review will be done on an initial list of accepted terms. Insights from review will be fed back into reusable logic, which that might require complex OAK queries. over inconsistent annotations, or grouping of values within a semantic embedding space. For example, there may be evidence that [farm [ENVO:00000078]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00000078),
   [agricultural field [ENVO:00000114]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00000114)
   and [banana plantation [ENVO:00000161]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00000161)
 - As necessary, we can request that EnvO add classes in support of this work, or that more (and more consistent) axioms
