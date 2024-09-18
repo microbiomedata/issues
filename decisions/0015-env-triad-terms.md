@@ -91,7 +91,6 @@ For **soil** environment (MIxS Extension)
   exclude [aquatic biome [ENVO:00002030]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00002030)
 - `env_local_scale` ????? TBC
 - `env_medium`
-    - Subclass hierarchy-based exclusion _could_ also be used here, for
       example [hydrocarbon-based environmental material [ENVO:2000045]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_2000045?lang=en)
     - Textual filtering over labels, with or without regular expressions or stemming, _could_ also be used
         - food, water and ice terms could be removed without stemming
