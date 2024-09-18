@@ -53,7 +53,6 @@ empirical evidence will be more important for `env_local_scale`. General, rules-
 of the environments (MIxS Extensions), and will be reflected in either query-specific columns or general boolean
 columns, like 'is_biome' or 'is_environmental_material'.
 
-- The environmental triad squad is developing an NMDC-prioritized list of environments. Soil will be completed first.
 - This ADR will be updated as environment-specific queries are created.
 - The logic described above is intended to minimize cherry-picking of values for the sets, but individual squad members
   will be given the opportunity to add their own `Y` or `N` votes for each value in the tables. It may be possible to
