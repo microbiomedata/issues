@@ -61,7 +61,7 @@ columns, like 'is_biome' or 'is_environmental_material'.
   [agricultural field [ENVO:00000114]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00000114)
   and [banana plantation [ENVO:00000161]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00000161)
 - As necessary, we can request that EnvO add classes in support of this work, or that more (and more consistent) axioms
-  are added to existing classes.
+  are added to existing classes. This will not be done as part of the squad contributing this ADR.
 
 ## NMDC General Queries for Environmental Triad Value Sets
 
