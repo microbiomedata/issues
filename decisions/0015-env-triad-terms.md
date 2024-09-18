@@ -95,8 +95,6 @@ For **soil** environment (MIxS Extension)
     - Textual filtering over labels, with or without regular expressions or stemming, _could_ also be used
         - food, water and ice terms could be removed without stemming
         - stemming with the pattern 'ferment' could be used to remove terms with fermented or fermenting in their labels
-    - But there's a good chance that the empirical ranking of the environmental material classes will have a better
-      cost/benefit profile (at least initially) than writing a library of rules.
 
 This ADR will be updated following the evaluation of these initial queries, followed by human review and voting.
 
