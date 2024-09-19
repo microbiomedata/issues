@@ -71,8 +71,6 @@ columns, like 'is_biome' or 'is_environmental_material'.
   and [environmental material [ENVO:00010483]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00010483)
     - It's expected that additional branches of the is_a hierarchy will subtracted,
       like [chemical entity [CHEBI:24431]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FCHEBI_24431)
-    
- 
 - `env_medium` will consist of subclasses environmental material [ENVO:00010483]
 
 For **soil** environment (MIxS Extension)
