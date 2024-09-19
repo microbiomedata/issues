@@ -56,7 +56,7 @@ columns, like 'is_biome' or 'is_environmental_material'.
 - This ADR will be updated as environment-specific queries are created.
 - The logic described above is intended to minimize cherry-picking of values for the sets.
 - Any filtering should be accomplished as a general query. For example, we will not remove a specific term, but rather identify a rule that accounts for more general needs.
-- Expert review will be done on an initial list of accepted terms. Insights from review will be fed back into reusable logic, which that might require complex OAK queries. over inconsistent annotations, or grouping of values within a semantic embedding space.
+- Expert review will be done on an initial list of accepted terms. Insights from review will be fed back into reusable logic, which might require complex OAK queries. over inconsistent annotations, or grouping of values within a semantic embedding space.
 - As necessary, we can request that EnvO add classes in support of this work, or that more (and more consistent) axioms
   are added to existing classes. This will not be done as part of the squad contributing this ADR.
 
