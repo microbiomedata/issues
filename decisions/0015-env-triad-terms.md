@@ -78,11 +78,7 @@ For **soil** environment (MIxS Extension)
 - `env_broad_scale` will
   exclude [aquatic biome [ENVO:00002030]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_00002030)
 - `env_local_scale` ????? TBC
-- `env_medium`
-      example [hydrocarbon-based environmental material [ENVO:2000045]](https://www.ebi.ac.uk/ols4/ontologies/envo/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FENVO_2000045?lang=en)
-    - Textual filtering over labels, with or without regular expressions or stemming, _could_ also be used
-        - food, water and ice terms could be removed without stemming
-        - stemming with the pattern 'ferment' could be used to remove terms with fermented or fermenting in their labels
+- `env_medium` TBC
 
 This ADR will be updated following the evaluation of these initial queries, followed by human review and voting.
 * This evaluation was completed by the authors of this PR and the members of the NMDC's "Env Triad Squad"
