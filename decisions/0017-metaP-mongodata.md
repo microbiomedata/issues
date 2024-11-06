@@ -6,8 +6,7 @@ deciders: Shreyas Cholia, Katherine Heal, Alicia Clum, Sam Purvine
 consulted: Paul Piehowski, Lee Ann McCue, Mark Miller
 informed: Everyone in Metadata meeting
 ---
-# {short title of solved problem and solution}
-
+# Metaproteomics results data should not be in Mongo
 ## Context and Problem Statement
 
 There are large mongo data records for metaproteomics workflow activities, this causes issues for the API and elsewhere and is not sustainable. 
@@ -15,16 +14,18 @@ There are large mongo data records for metaproteomics workflow activities, this 
 
 ## Considered Options
 
-* {Rework Aggregation Scripts}
-- Rewrite the aggregation scripts to access the Metaproteomics processed data (not just the mongo records about those data).
+* **Rework Aggregation Scripts**
 
-* {Bypass Aggregation Scripts}
-- Modify the Metaproteomics workflow to directly write the FunctionalAnnotationAggMember records (originally written by aggregation script).
+Rewrite the aggregation scripts to access the Metaproteomics processed data (not just the mongo records about those data).
+
+* **Bypass Aggregation Scripts**
+
+Modify the Metaproteomics workflow to directly write the FunctionalAnnotationAggMember records (originally written by aggregation script).
 
 
 ## Decision Outcome
 
-Chosen option: "{Rework Aggregation Scripts}", to maintain modularity of the aggregation process.
+Chosen option: "**Rework Aggregation Scripts**", to maintain modularity of the aggregation process.
 
 We will also rewrite the aggregation script to use the API rather than directly access mongoDB.
 
