@@ -35,6 +35,7 @@ https://api.microbiomedata.org/docs#/find/find_data_objects_for_study_data_objec
 - An endpoint that performs a join to find objects of a certain type (DataObject) from another (Study)
 - It uses the alldocs collection (an aggregation of our source of truth collections) to make the join
 - During the retreat, Jing also implemented another prototype endpoint to go in the other direction, from DataObject to Biosample
+
 Graph database
 - Mark Miller spun up a graph database view of NMDC data to help query and inspect connections between NMDC objects
 
@@ -65,11 +66,15 @@ https://jeffbaumes.github.io/nmdc-client/
 
 ## Decision Outcome
 
+**Decision:** Use server side endpoint
 
+**Details:** 
 - Polyneme will look at reviving associations endpoint that will serve as a flexible approach to traverse schema
     - https://github.com/microbiomedata/nmdc-runtime/issues/717 
-- Jeff’s nmdc_client downloads the entire graph in memory client side - this is a useful prototype but this is best approached as a server-side operation, since client side may have scaling issues and support will be difficult. 
-- We will look to borrow concepts and design from this on the server side code
-- Server side implementation will also be language agnostic
-- For now hold off on specific nmdc_client implementation, but notebooks team should feel free to borrow veneer code and convenience functions from nmdc_client example to setup helper functions etc. We will revisit nmdc_client library in the future - this is still a good idea for simplifying complex operations and multi-step API calls. For now implement pieces as support code in notebooks repo.  
+- Jeff Baumes' nmdc_client downloads the entire graph in memory client side - this is a useful prototype but this is best approached as a server-side operation, since client side may have scaling issues and support will be difficult. 
+    - We will look to borrow concepts and design from this on the server side code
+- Server side implementation will be language agnostic
+- Hold off on specific nmdc_client implementation, but notebooks team should feel free to borrow veneer code and convenience functions from nmdc_client example to setup helper functions etc.
+- We will revisit an nmdc_client library in the future
+    - this is still a good idea for simplifying complex operations and multi-step API calls. For now implement pieces as support code in notebooks repo.  
 
