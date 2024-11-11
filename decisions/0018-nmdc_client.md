@@ -42,7 +42,8 @@ Graph database
 https://github.com/microbiomedata/refscan
 - A library that draws out connections between NMDC classes and constructs a network
 - Utilizes the actual schema and SchemaView to inspect NMDC slot relationships without requiring any hard-coded knowledge of NMDC (other than the Database class)
-- nmdc-server (Data portal)
+
+nmdc-server (Data portal)
 - Has an endpoint used by the client which can link across collections, but this is not “client friendly” in general and was designed to be consumed by the data portal.
 
 https://github.com/jeffbaumes/nmdc-client
