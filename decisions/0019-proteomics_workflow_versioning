@@ -1,0 +1,30 @@
+---
+# Update these YAML values so they describe this decision. Delete the leading `→` characters.
+status: → proposed 
+date: → 2024-11-14 
+deciders: → Alicia, Paul, Lee Ann, Katherine, Sam, Cam, Yuri
+consulted: → Mark M., Sierra
+informed: → Chris M.
+---
+# Subclass metaproteomics workflows
+
+## Context and Problem Statement
+
+Version 2 of the proteomics workflow is now avaliable. Version 2 uses kaiko to generate a metagenome reference using machine learning if one does not exist. 
+Version 1 of the workflow, which depends on an existing metagenome reference, will contintue to be run. How should these workflows be versioned? 
+Existing workflow versioning convention is that if a workflow is return the typecode, shoulder and blade are the same and there is a version increment 
+(ex nmdc:wfmp-11-abcd.1 for the first run and nmdc;wfmp-11-abdc.2 for the second run). 
+
+
+## Considered Options
+
+* {title of option 1}
+* {title of option 2}
+* {title of option 3}
+* … <!-- numbers of options can vary -->
+
+## Decision Outcome
+
+Chosen option: "{title of option 1}", because
+{justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+
