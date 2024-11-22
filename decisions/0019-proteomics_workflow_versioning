@@ -1,10 +1,9 @@
 ---
-# Update these YAML values so they describe this decision. Delete the leading `→` characters.
-status: → proposed 
-date: → 2024-11-14 
-deciders: → Alicia, Paul, Lee Ann, Katherine, Sam, Cam, Yuri
-consulted: → Mark M., Sierra
-informed: → Chris M.
+status: proposed 
+date: 2024-11-14 
+deciders: Alicia, Paul, Lee Ann, Katherine, Sam, Cam, Yuri
+consulted: Mark M., Sierra
+informed: Chris M.
 ---
 # Subclass metaproteomics workflows
 
@@ -13,7 +12,7 @@ informed: → Chris M.
 Version 2 of the proteomics workflow is now avaliable. Version 2 uses Kaiko to generate a metagenome reference using machine learning if one does not exist. 
 Version 1 of the workflow, which depends on an existing metagenome reference, will contintue to be run. How should these workflows be versioned? 
 Existing workflow versioning convention is that if a workflow is return the typecode, shoulder and blade are the same and there is a version increment 
-(ex nmdc:wfmp-11-abcd.1 for the first run and nmdc;wfmp-11-abdc.2 for the second run). 
+(ex nmdc:wfmp-11-abcd.1 for the first run and nmdc:wfmp-11-abdc.2 for the second run). 
 
 
 ## Considered Options
@@ -32,5 +31,5 @@ an updated annotation and V1 is rerun. This would would get an identifer of nmdc
 
 ## Decision Outcome
 
-Chosen option: Subclass v1 and v2 of proteomics workflow, because it provides a simplier implmenation for workflow scripts and is more intiuitive for users.
+Chosen option: Subclass v1 and v2 of proteomics workflow, because it provides a simplier implmenation for workflow scripts and is more intiuitive for users. Work will be done in microbiomedata/nmdc-schema#2256.
 
