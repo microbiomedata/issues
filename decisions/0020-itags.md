@@ -1,6 +1,6 @@
 ---
-status: proposed
-date: → 2024-11-19
+status: approved
+date: 2024-11-22
 deciders: Patrick C., Alicia, Lee Ann, Emiley
 consulted: Mark M, Sierra, Chris
 informed: NMDC leadership team
