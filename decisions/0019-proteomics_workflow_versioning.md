@@ -21,16 +21,19 @@ is the prefix, `wfmp` is the typecode, `11` is the shoulder, `abdc` is the blade
 ## Considered Options
 
 * Subclass v1 and v2 of proteomics workflow
+
 This option would provide different human readable typecodes to orient a user and it would be clearer that the most recent version of a true referenced based workflow run versus a in-silico 
 based reference.  An example would be the first run is a reference-based (V1) with an identifier of nmdc:wfmprb-11-1231.1, the second is a version 2 (Kaiko) workflow run with an 
 identifier of nmdc:wfmpis-11-1247.1, the third run there is an updated annotation and V1 is rerun. This would would get an identifer of nmdc:wfmprb-11-1231.2. 
 an updated annotation and V1 is rerun. This would would get an identifer of nmdc:wfmp-11-1231.3 with the current modeling.
 * Leave metaproteomics as a single workflow execution subclass with workflows sharing an identifier blade
+
 This option does not provide any orientation to the user via a typecode and would be more complex to correctly version the workflows. This would either involve complex logic to look at the 
 version to decide if to increment the version and for what blade. Or it would result in the two versions using the same identifier type code, blade and shoulder which would be confusing to the user.
 An example would be the first run is a reference-based (V1) with an identifier of nmdc:wfmp-11-1231.1, the second is a version 2 (Kaiko) workflow run with an identifier of nmdc:wfmp-11-1231.2, the third there is 
 an updated annotation and V1 is rerun. This would would get an identifer of nmdc:wfmp-11-1231.3 with the current modeling.
 * Leave metaproteomics as a single workflow execution subclass with workflows have a different identifier blade
+
 This option makes the most sense in terms of modeling because the workflows produce the same outputs and is consisent with previous decisons about
 identifier transparency versus opaqueness.  Having different identifier blades addresses concerns about workflow versioning. Example: reference-based
 workflow (v1) run number one would have an identifier of nmdc:wfmp-11-1231.1, a rerun would of that same workflow would be nmdc:wfmp-11-1231.2. The first run using
