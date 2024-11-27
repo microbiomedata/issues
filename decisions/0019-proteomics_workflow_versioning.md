@@ -12,7 +12,8 @@ informed: Chris M.
 Version 2 of the proteomics workflow is now avaliable. Version 2 uses Kaiko to generate a metagenome reference using machine learning if one does not exist. 
 Version 1 of the workflow, which depends on an existing metagenome reference, will contintue to be run. How should these workflows be versioned? 
 Existing workflow versioning convention is that if a workflow is return the typecode, shoulder and blade are the same and there is a version increment 
-(ex nmdc:wfmp-11-abcd.1 for the first run and nmdc:wfmp-11-abdc.2 for the second run).  Details about NMDC identifies can be found (here)[https://microbiomedata.github.io/nmdc-schema/identifiers/].
+(ex nmdc:wfmp-11-abcd.1 for the first run and nmdc:wfmp-11-abdc.2 for the second run).  Details about NMDC identifies can be found 
+(here)[https://microbiomedata.github.io/nmdc-schema/identifiers/].
 Workflow identifiers are identified with a prefix, typecode, shoulder, blade, and version. For example identifier `nmdc:wfmp-11-abcd.1` `nmdc`
 is the prefix, `wfmp` is the typecode, `11` is the shoulder, `abdc` is the blade and `1` is the version.
 
