@@ -5,7 +5,7 @@ deciders: Alicia, Paul, Lee Ann, Katherine, Sam, Cam, Yuri
 consulted: Mark M., Sierra
 informed: Chris M.
 ---
-# Subclass metaproteomics workflows
+# Modeling and identifiers for proteomics workflows
 
 ## Context and Problem Statement
 
