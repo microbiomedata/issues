@@ -1,0 +1,14 @@
+# Use Markdown Any Decision Records
+
+## Context and Problem Statement
+
+The Documentation squad made a decision to only update tutorial videos once a year at most. We would also like to get help from the engagement team to do these updates. 
+
+## Considered Options
+
+Updating videos once a month or with every release - too much time, effort, no full time documentation team member
+Updating videos once a year with major changes - reasonable, would prefer to do in conjunction with engagement team
+
+## Decision Outcome
+
+Chosen option: Update videos once a year if needed. 
