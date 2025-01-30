@@ -36,3 +36,29 @@ We need something in short order to avoid having a commonly writable area for NM
 ### Cons
 - JAMO can be somewhat heavyweight for our use since JGI has a lot of feature requirements not needed for NMDC
 - Not a widely deployed tool, not open source, so it will be harder to run this on other systems like EMSL, and it may be trickier to contribute changes.
+
+## System Design
+
+### Data Selection and Validation
+   - Production MongoDB serves as the primary reference
+   - File location imputed from URLs and type attributes of records
+   - Exclude EMSL records (via URL prefix or type)
+   - Include only NERSC CFS hosted files
+   - JGI imported data archival status pending long term resource management strategy review
+   - Cross-reference with workflow execution records
+
+### Architecture Components
+1. Data Discovery Service
+   - MongoDB query interface
+   - Business logic for record filtering
+   - Location resolution system
+2. Archival System
+   - JAMO integration layer
+3. Monitoring and Tracking
+   - Job status monitoring
+
+### Workflow
+```
+MongoDB Query -> Filter Application -> Location Resolution -> JAMO Ingestion -> Status Update -> Verification + Complete Logging
+```   
+
