@@ -1,26 +1,21 @@
-# Update these YAML values so they describe this decision. Delete the leading `→` characters.
-status: → proposed | rejected | accepted | deprecated | … | superseded by [ADR-00XX](./0001-improve-connection-between-home-page-and-products.md)
-date: → YYYY-MM-DD indicating when the decision was last updated
-deciders: → list everyone involved in the decision
-consulted: → list everyone whose opinions are sought (typically, subject matter experts); and with whom there is two-way communication
-informed: → list everyone who is kept up-to-date on progress; and with whom there is one-way communication
+status: accepted
+date: 2025-01-15
+deciders: 1pm metadata sync team, Emiley, Chris, Lee Ann
+consulted: all on the 1pm metadata team
+informed: all on the 1pm metadata team sync
 ---
-# {short title of solved problem and solution}
+# Update and replace policy and tracking of principal investigator
 
 ## Context and Problem Statement
 
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story.
- You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
-
-
-## Considered Options
-
-* {title of option 1}
-* {title of option 2}
-* {title of option 3}
-* … <!-- numbers of options can vary -->
+Currently, principal investigator is captured in 2 places. Using the slot `principal_investigator` as well as the CREDIT role `has_credit_association` for Person values.
 
 ## Decision Outcome
 
-Chosen option: "{title of option 1}", because
-{justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+- the slot `principal_investigator` will be deprecated
+- CREDIT roles will be used to identify the PI
+- Multiple PIs can be assigned to a single study
+
+## Next Steps
+
+This decision has not yet been implemented. This change will require an update to how the data portal displays PI and a migration.
