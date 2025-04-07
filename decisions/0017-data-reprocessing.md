@@ -39,4 +39,6 @@ For example, for compute intense workflows like metagenomes only reprocess high 
 Chosen option: "ad hoc when there are major changes", because this seems to strike the best balance between dataset interpoerablity and opportunity cost.
 
 
+For details of analysis conducted please see https://github.com/microbiomedata/WorkflowPlanning/tree/master/data_reprocessing_analysis.
+
 
