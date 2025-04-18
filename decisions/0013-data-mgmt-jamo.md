@@ -49,7 +49,7 @@ We need something in short order to avoid having a commonly writable area for NM
 
 ### Architecture Components
 1. Data Discovery Service
-   - MongoDB query interface
+   - NMDC Runtime API (MongoDB) query interface
    - Business logic for record filtering
    - Location resolution system
 2. Archival System
@@ -59,6 +59,6 @@ We need something in short order to avoid having a commonly writable area for NM
 
 ### Workflow
 ```
-MongoDB Query -> Filter Application -> Location Resolution -> JAMO Ingestion -> Status Update -> Verification + Complete Logging
+NMDC MongoDB (Via Runtime API) Query -> Filter Application -> Location Resolution -> JAMO Ingestion -> Status Update -> Verification + Complete Logging
 ```   
 
