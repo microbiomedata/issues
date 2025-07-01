@@ -1,15 +1,16 @@
 ---
-# Update these YAML values so they describe this decision. Delete the leading `→` characters.
-status: → proposed | rejected | accepted | deprecated | … | superseded by [ADR-00XX](./0001-improve-connection-between-home-page-and-products.md)
-date: → YYYY-MM-DD indicating when the decision was last updated
-deciders: → list everyone involved in the decision
-consulted: → list everyone whose opinions are sought (typically, subject matter experts); and with whom there is two-way communication
-informed: → list everyone who is kept up-to-date on progress; and with whom there is one-way communication
+status: accepted
+date: 2025-07-01
+deciders: Chris Mungall, Montana Smith, Mark Miller, Katherine Heal, 
+consulted: Samantha Obermiller, Bea Meluch, Patrick Kalita, Lee Ann McCue, Sujay Patil, Alicia Clum
+informed: 
 ---
-# {short title of solved problem and solution}
+# UCUM implenetation in NMDC
 
 ## Context and Problem Statement
 
+Providing units has been a struggle for data clarity. The NMDC will adopt the [Unified Code for Units of Measure (UCUM)](https://ucum.org/). This will ensure consistancy across all measurement values and provide clear guidance and expectations for all incomming data. 
+XXX 
 {Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story.
  You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
 
