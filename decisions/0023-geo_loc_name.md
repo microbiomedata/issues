@@ -1,7 +1,7 @@
 ---
 status: accepted
 date: 2025-09-24
-deciders: Montana Smith, Sierra Moxon, Cris Mungall, Sujay Patil
+deciders: Montana Smith, Sierra Moxon, Chris Mungall, Sujay Patil
 consulted:
 informed: 
 ---
