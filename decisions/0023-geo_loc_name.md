@@ -9,7 +9,7 @@ informed:
 
 ## Context and Problem Statement
 
-This surfaced as a problem when trying to submit NMDC metadata to NCBI (e.g., USA vs US vs United States of America). NCBI enforces country names based on INSDC conventions. We needed to decide if we would adopt these as well or if this should be handled on via export code. INSDC conventions can be found at https://www.insdc.org/submitting-standards/geo_loc_name-qualifier-vocabulary/. 
+This surfaced as a problem when trying to submit NMDC metadata in the `geo_loc_name` slot/key to NCBI (e.g., `geo_loc_name` has a mixture of values like "USA", "US", "United States of America" in the database). NCBI enforces validation on the country name part of the `geo_loc_name` string based on INSDC conventions. We needed to decide if we would adopt these as well or if this should be handled on via export code. INSDC conventions can be found at https://www.insdc.org/submitting-standards/geo_loc_name-qualifier-vocabulary/. 
 
 
 ## Considered Options
