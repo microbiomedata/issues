@@ -9,18 +9,16 @@ informed:
 
 ## Context and Problem Statement
 
-Providing units has been a struggle for data clarity. The NMDC will adopt the [Unified Code for Units of Measure (UCUM)](https://ucum.org/). This will ensure consistancy across all measurement values and provide clear guidance and expectations for all incomming data. 
-XXX 
-{Describe the context and problem statement, e.g., in free form using two to three sentences or in the form of an illustrative story.
- You may want to articulate the problem in form of a question and add links to collaboration boards or issue management systems.}
+The NMDC has developed a LinkML schema with slot ranges of QuantityValue to structure data into a {value}{unit} format. Many slots are assigned this range. Additionally, many slots have designations for the expected unit. For example, a slot providing a measurement of distance would require QuantityValue format, but could provide unit 'banana' if someone so chose! More realistically, the variability of cm, centimeter, m, meter, or metre would also be acceptable. This is not standardized and diminishes data interoperability and discoverability.
+To address this, the NMDC will adopt the [Unified Code for Units of Measure (UCUM)](https://ucum.org/). This will ensure consistancy across all measurement values and provide clear guidance and expectations for all incomming data.
+This ADR outlines:
+- what existing NMDC (meta)data was migrated and how existing data was restructred into a UCUM valid format
+- how annotations was used to require UCUM units, slot requirement, and provide how to new slots added to NMDC schema will need formatted to comply
+- how data ingested into NMDC can be checked and validated.
+- what ETL updates will be needed for NMDC's data ingest. (this work still to be completed)
+- the updates made to submission portal ingest and submission portal validation
 
 <!-- This is an optional element. Feel free to remove. -->
-## Decision Drivers
-
-* {decision driver 1, e.g., a force, facing concern, …}
-* {decision driver 2, e.g., a force, facing concern, …}
-* … <!-- numbers of drivers can vary -->
-
 ## Considered Options
 
 * {title of option 1}
