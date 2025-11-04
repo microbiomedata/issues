@@ -18,7 +18,6 @@ This ADR outlines:
 - what ETL updates will be needed for NMDC's data ingest. (this work still to be completed)
 - the updates made to submission portal ingest and submission portal validation
 
-<!-- This is an optional element. Feel free to remove. -->
 ## Considered Options
 
 * {title of option 1}
@@ -26,19 +25,10 @@ This ADR outlines:
 * {title of option 3}
 * … <!-- numbers of options can vary -->
 
-## Decision Outcome
+## Decision Outcomes
 
-Chosen option: "{title of option 1}", because
-{justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force {force} | … | comes out best (see below)}.
+Upon implementation of UCUM, all NMDC slots with `range: QuantityValue` will have a `storage_units` annotation to designate allowed units and required formats for data.
 
-<!-- This is an optional element. Feel free to remove. -->
-### Consequences
-
-* Good, because {positive consequence, e.g., improvement of one or more desired qualities, …}
-* Bad, because {negative consequence, e.g., compromising one or more desired qualities, …}
-* … <!-- numbers of consequences can vary -->
-
-<!-- This is an optional element. Feel free to remove. -->
 ## Validation
 
 {describe how the implementation of/compliance with the ADR is validated. E.g., by a review or an ArchUnit test}
@@ -71,8 +61,13 @@ Chosen option: "{title of option 1}", because
 <!-- This is an optional element. Feel free to remove. -->
 ## More Information
 
-{You might want to provide additional evidence/confidence for the decision outcome here and/or
- document the team agreement on the decision and/or
- define when this decision when and how the decision should be realized and if/when it should be re-visited and/or
- how the decision is validated.
- Links to other decisions and resources might here appear as well.}
+### Migrating existing NMDC data
+
+
+### Implementing annotations
+
+### ETL Updates
+
+### Validation
+
+### Submission Portal ingest & Validation
