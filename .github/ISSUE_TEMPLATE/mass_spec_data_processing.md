@@ -62,7 +62,7 @@ projects: "microbiomedata/178"
 
 ### NOM
 - [ ] **MS acquisition confirmed as high resolution and from FT-ICR**
-- [ ] **SFRA calibration used and files located** (not necessary but recommended)
+- [ ] ** SRFA calibration used and files located** (not necessary but recommended)
 - [ ] **File format compatible** (.d or .raw)
 
 ---
