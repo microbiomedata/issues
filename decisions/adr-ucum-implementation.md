@@ -31,6 +31,9 @@ To address this, NMDC will adopt the **Unified Code for Units of Measure (UCUM)*
 
 ## Considered Options
 
+- Create various subclasses of `QuantityValue` for slots we want constrained, example `QuantityValueTemp` where `has_unit` is required and constrained to 'C'. Downside to approach was that a separate `QuantityValue` subclass had to be made for each `has_unit` value we wanted to require.
+- Create subclass `QuantityValuewithUnit` where `has_unit` is a required slot and constrained to enum `UnitEnum`. Downside to approach was that any of the `UnitEnum` values could be used for any slot (i.e. 'm' could be used for `temp` slot)
+
 - **Numeric‑only slots with LinkML `unit` metaslot** – Convert all `QuantityValue` slots to scalar numeric types (int/float) and use the LinkML `unit` metaslot to store UCUM symbols, which can represent one or multiple allowed units per slot. This simplifies validation but requires a major schema redesign and breaks compatibility with existing data.  
 - **Conversion pipeline on ingest** – Accept any unit in the submission schema and perform extensive unit conversion during ETL ingestion. Flexible for submitters but adds significant engineering overhead and runtime conversion complexity.  
 - **Hybrid approach (Chris Mungall’s suggestion)** – Keep the existing `QuantityValue` structure, constrain allowed units to the UCUM symbol for the MIxS‑preferred unit(s), and auto‑convert full‑name units to UCUM on ingest. Balances MIxS alignment with practical data handling.  
