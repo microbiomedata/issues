@@ -10,14 +10,14 @@ projects: "microbiomedata/178"
 ## Study Information
 - **Study ID:** _______________
 - **User Project ID:** _____________
-    *this should be populated at the study level in the [`emsl_project_identifiers`](https://microbiomedata.github.io/nmdc-schema/emsl_project_identifiers/) or [`jgi_portal_study_identifiers`](https://microbiomedata.github.io/nmdc-schema/jgi_portal_study_identifiers/) slots*
+    *this should be populated at the study level in the [`emsl_project_identifiers`](https://microbiomedata.github.io/nmdc-schema/emsl_project_identifiers/) and/or [`jgi_portal_study_identifiers`](https://microbiomedata.github.io/nmdc-schema/jgi_portal_study_identifiers/) slots*
 - **Source of Original Biosamples:** _______________
 - **Location of Raw Data:**  _______________
 - **Data Type:** ⬜ LCMS Metabolomics  ⬜ LCMS Lipidomics  ⬜ GCMS Metabolomics  ⬜ NOM
 
 ---
 ## Step 1: Gather user facility information
-**Objective:** If the following cannot be obtained through existing data on NMDC or associated publications, reach out to PI or user facility managers to obtain the following information
+**Objective:** Gather essential sample and processing metadata from NMDC submissions, publications, etc. If the following cannot be obtained through existing data on NMDC or associated publications, reach out to PI or user facility managers to obtain the following information
 - **Requestor(s):** _______________
 - **Date:** _______________
 
