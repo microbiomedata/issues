@@ -2,8 +2,8 @@
 name: Metabolomics/Lipidomics/NOM Data Processing Request
 about: Template for requesting data processing for Mass Spectrometry based Metabolomics, Lipidomics, or Natural Organic Matter (NOM) datasets.
 title: 'Data Processing Request for [Study ID], [Data Type]'
-labels: 'data_processing'
-projects: "microbiomedata/178"
+labels: ["metab_data_processing"]
+assignees: ''
 
 ---
 
