@@ -118,7 +118,6 @@ The migration to UCUM‑compliant units proceeds through a pipeline that is full
   - Slots that can receive a `storage_units` annotation.
   - Slots that cannot be expressed in UCUM and therefore receive a `units_alignment_excuse` (e.g., `api`, `soil_text_measure`).
 - The curated TSV is committed back to the repo, becoming the single source of truth for the migration.
-- *Note: As of November 2025, two related PRs are pending review by migrators: #2690 (Draft: Start improving slots that had units excuses) and #2689 (Approved: Add storage_units annotations for 7 slots reviewed in PR #2653).
 
 **3. Apply annotations to the schema**
 
