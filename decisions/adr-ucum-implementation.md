@@ -94,7 +94,6 @@ slot_name:
 **Owner responsibilities**
 
 - Audit existing `QuantityValue` slots and populate `storage_units` where possible.
-- Add `units_alignment_excuse` entries for slots that cannot use UCUM.
 - Update the validation test to reflect any new exception categories.
 - Review PRs that modify schema files to ensure compliance.
 
