@@ -10,7 +10,7 @@ informed:
 
 ## Context and Problem Statement
 
-NMDC records measurements in two places: the **submission‑schema**, where values appear as a single `{value}{unit}` string, and the **nmdc-schema, for data storage**, where a `QuantityValue` class stores the numeric part in `has_value` and the unit in `has_unit`. Although many slots document a `preferred_unit` (originating from MIxS), most currently accept any unit (e.g., `cm`, `meter`, or even `banana`), which breaks data interoperability.
+NMDC records measurements in two places: the **submission‑schema**, where values appear as a single `{value} {unit}` string, and the **nmdc-schema, for data storage**, where a `QuantityValue` class stores the numeric part in `has_value` and the unit in `has_unit`. Although many slots document a `preferred_unit` (originating from MIxS), most currently accept any unit (e.g., `cm`, `meter`, or even `banana`) in `has_unit`, which breaks data interoperability.
 
 A large number of MIxS‑derived slots lack a `preferred_unit` annotation or contain ambiguous or non‑UCUM units, such as:
 
