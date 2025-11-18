@@ -77,7 +77,6 @@ slot_name:
 
 - **`storage_units`** – a free‑form string containing one or more UCUM symbols. Tokens may be separated by pipes.
 - The `storage_units` annotation is **mandatory** for every `QuantityValue` slot **unless** a `units_alignment_excuse` is provided; otherwise its absence triggers a validation error.
-- Existing slots that cannot be expressed in UCUM retain a `units_alignment_excuse` entry explaining the exception.
 - The `UnitEnum` used to validate `storage_units` entries is a project‑specific, organic enumeration of UCUM symbols; it may not be suitable for other schemas.
 
 **Enforcement**
