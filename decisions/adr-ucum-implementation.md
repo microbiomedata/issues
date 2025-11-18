@@ -134,5 +134,5 @@ The migration to UCUM‑compliant units proceeds through a pipeline that is full
 - **Three‑layer test suite** (described in the “# Validation” section) ensures:
   1. Intrinsic LinkML validation (`tests/test_units_alignment.py`).
   2. External conversion tests (`tests/test_units_conversion.py`).
-  3. The custom LinkML validator plugin (`linkml-validator‑units`) contributed by @pkalita‑lbl.
+  3. The custom LinkML validator plugin (`linkml-validator‑units`)
 - **Documentation update** – Finally, the ADR’s “Migration of existing NMDC data” section and the `units/docs/units-problems-definitive.md` file could be updated to reflect the completed migration.
