@@ -115,13 +115,11 @@ The migration to UCUM-compliant units proceeds through a pipeline that is fully 
 - **Generate yq commands** - `make units-schema-generate` runs `units/scripts/schema_generate_yq_commands.py` which reads the curated TSV and writes two command files:
   - `output/yq_commands_single_unit.txt` - one-liner `yq` commands for slots with a single allowed unit.
   - `output/yq_commands_multi_unit.txt` - commands for slots with a pipe-separated list of allowed units.
-- **Apply changes** - Pipe the command files into the shell (or open a PR) to modify the YAML schema files under `src/schema/`. The resulting PR is the one merged as [PR #2599](https://github.com/microbiomedata/nmdc-schema/pull/2599).
+- **Apply changes** - Pipe the command files into the shell (or open a PR) to modify the YAML schema files under `src/schema/`. The resulting PR was [PR #2599](https://github.com/microbiomedata/nmdc-schema/pull/2599).
 
 **4.  Production data migration & validation**
 
 _To be deprecated by `NmdcSchemaValidationPlugin`-based methods_
-
-
 
 - **Export MongoDB** - `make local/mongo_via_api_as_unvalidated_nmdc_database.yaml` uses `pure-export` to dump the live NMDC database to a single YAML file.
 - **Validate production data** - Scripts in `units/scripts/` (such as `ucum_validate_units.py`) check production data against the schema's `storage_units` constraints.
