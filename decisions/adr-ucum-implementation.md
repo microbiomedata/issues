@@ -16,7 +16,8 @@ A large number of MIxS‑derived slots lack a `preferred_unit` annotation or con
 
 - `abs_air_humidity` lists "gram per gram or cubic centimeter per cubic centimeter"  
 - `efficiency_percent` uses "mg/kg (ppm)"  
-- `inside_lux` mislabels a power‑density unit as illuminance, and `rel_humidity_out` has ambiguous humidity units  
+- `inside_lux` mislabels a power‑density unit as illuminance
+- `rel_humidity_out` has ambiguous humidity units  
 - `api` relies on a petroleum‑industry convention
 
 These inconsistencies hinder reliable validation and downstream analysis. By adopting UCUM, we will standardize every measurement to a canonical UCUM symbol, record any unavoidable gaps with `units_alignment_excuse`, and enforce the mapping through the `storage_units` annotation.
