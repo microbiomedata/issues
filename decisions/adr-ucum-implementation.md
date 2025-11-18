@@ -99,12 +99,8 @@ slot_name:
 - Update the validation test to reflect any new exception categories.
 - Review PRs that modify schema files to ensure compliance.
 
-**Assignments**
+The migration to UCUM‑compliant units proceeds through a pipeline that is fully scripted and version‑controlled. All artifacts referenced below exist in the repository or in linked GitHub issues/PRs. *Note: Some of the scripts mentioned in this pipeline, particularly those in the `units/scripts` directory, are semi-optional or non-essential for the core migration process.*
 
-- @sujaypatil96: Responsible for ETL updates.
-- @pkalita‑lbl: Responsible for submission portal ingest & data validation updates.
-
-The migration to UCUM‑compliant units proceeds through a pipeline that is fully scripted and version‑controlled. All artefacts referenced below exist in the repository or in linked GitHub issues/PRs. *Note: Some of the scripts mentioned in this pipeline, particularly those in the `units/scripts` directory, are semi-optional or non-essential for the core migration process.*
 
 **1. Inventory & proposal generation**
 
