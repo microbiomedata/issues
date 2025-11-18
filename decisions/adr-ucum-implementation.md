@@ -23,7 +23,7 @@ These inconsistencies hinder reliable validation and downstream analysis. By ado
 
 To address this, NMDC will adopt the **Unified Code for Units of Measure (UCUM)**, a canonical, machine‑readable set of unit symbols that can be automatically validated. This ADR describes:
 
-- how existing NMDC (meta)data was migrated and restructured into a UCUM‑valid format,  
+- how existing NMDC metadata was migrated and restructured into a UCUM‑valid format,  
 - how annotations are used to require UCUM units, slot requirements, and how new slots added to the NMDC schema must comply,  
 - the ETL updates required for NMDC's data ingest (work in progress),  
 - how ingested data can be checked and validated,  
