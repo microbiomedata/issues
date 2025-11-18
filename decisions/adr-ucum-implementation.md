@@ -92,7 +92,6 @@ slot_name:
 - Define the slot in the appropriate YAML file under `src/schema/`.
 - Add a pipe‑delimited list of UCUM symbols to `storage_units`. Each element must be a permissible value of `UnitEnum`; add to `UnitEnum` if necessary.
 - Run `make test` locally to ensure the validation passes.
-- Document the choice in the ADR under this section.
 
 **Owner responsibilities**
 
