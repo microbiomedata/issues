@@ -82,7 +82,7 @@ slot_name:
 **Enforcement**
 
 1. **Schema generation** – The LinkML compiler propagates `storage_units` into generated Python/Pydantic models as a class attribute.
-2. **Runtime validation** – The `units‑ucum‑validate` test (`tests/test_units_alignment.py`) iterates over all slots, verifies that each `QuantityValue` slot either has a non‑empty `storage_units` or a valid `units_alignment_excuse`.
+2. **Runtime validation** – The `units‑ucum‑validate` test (`tests/test_units_alignment.py`) iterates over all slots, verifies that each `QuantityValue` slot has a non‑empty `storage_units`.
 3. **CI integration** – The test suite runs on every PR; failures block merging until the annotation is added.
 
 **Workflow for new slots**
