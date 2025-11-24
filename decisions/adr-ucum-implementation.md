@@ -56,12 +56,11 @@ These three mechanisms together guarantee that both the schema definition and th
 ## More Information
 
 ### Migrating existing NMDC data
+This section describes the process for migrating existing data. 
 
 **Implementation of annotations and slot requirements**
 
 The UCUM integration introduces a new annotation `storage_units` on slots of type `QuantityValue`. This annotation lists the allowed UCUM unit symbols (pipe-separated) and is used by the NMDC validation suite.
-
-This section describes the process for migrating existing data. 
 
 ```yaml
 # Example slot definition in a LinkML schema
