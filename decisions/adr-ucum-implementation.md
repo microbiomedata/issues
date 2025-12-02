@@ -2,7 +2,7 @@
 status: accepted
 date: 2025-07-01
 deciders: Chris Mungall (@cmungall), Montana Smith (@mslarae13), Mark Miller (@turbomam), Katherine Heal (@kheal)
-consulted: Samantha Obermiller (@samobermiller), Bea Meluch (@bmeluch), Patrick Kalita (@pkalita-lbl), Lee Ann McCue (@leeannmccue), Sujay Patil (@sujaypatil96), Alicia Clum (@aclum)
+consulted: Samantha Obermiller (@samobermiller), Bea Meluch (@bmeluch), Patrick Kalita (@pkalita-lbl), Lee Ann McCue (@leeannmccue), Sujay Patil (@sujaypatil96), Alicia Clum (@aclum), Sierra Moxon (@sierra-moxon 
 informed:
 ---
 
