@@ -120,6 +120,7 @@ The migration to UCUM-compliant units was accomplished through a pipeline that w
 
 _To be deprecated by `NmdcSchemaValidationPlugin`-based methods_
 
+This section describes scripts and actions to migrate and validate data. These scripts were removed when accomplished and no longer exist. See commit `dec51f3c9`
 - **Export MongoDB** - `make local/mongo_via_api_as_unvalidated_nmdc_database.yaml` uses `pure-export` to dump the live NMDC database to a single YAML file.
 - **Validate production data** - Scripts in `units/scripts/` (such as `ucum_validate_units.py`) check production data against the schema's `storage_units` constraints.
 - **Validation mechanisms** - As described in the [Validation](#validation) section above, multiple automated tests ensure schema compliance.
