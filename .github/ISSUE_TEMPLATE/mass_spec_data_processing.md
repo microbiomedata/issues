@@ -12,6 +12,7 @@ assignees: ''
 - **User Project ID:** _____________
     *this should be populated at the study level in the [`emsl_project_identifiers`](https://microbiomedata.github.io/nmdc-schema/emsl_project_identifiers/) and/or [`jgi_portal_study_identifiers`](https://microbiomedata.github.io/nmdc-schema/jgi_portal_study_identifiers/) slots*
 - **Source of Original Biosamples:** _______________
+- **Link to associated Submission Portal Ticket****____________
 - **Location of Raw Data:**  _______________
 - **Data Type:** ⬜ LCMS Metabolomics  ⬜ LCMS Lipidomics  ⬜ GCMS Metabolomics  ⬜ NOM
 
