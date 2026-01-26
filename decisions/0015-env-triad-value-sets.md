@@ -78,7 +78,7 @@ From August 2024 through August 2025, NMDC attempted to publish value sets by in
 
 **Implementation details**:
 - Created ROBOT template (`nmdc_env_context_subset_membership.tsv`) mapping ENVO terms to NMDC subset IDs
-- Defined subset annotation properties in ENVO: `ENVO:03605010` (root) and its sub-properties
+- Defined subset annotation properties in ENVO: `ENVO:03605010` (NMDC environmental context subsets) and its sub-properties
 - Integrated into ENVO Makefile build process
 
 **Why ENVO integration was abandoned**:
