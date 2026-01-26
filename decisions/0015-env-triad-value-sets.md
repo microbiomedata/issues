@@ -138,19 +138,7 @@ The current submission-schema GitHub Pages documentation provides basic access t
 
 ---
 
-## Combined Decision Summary
-
-**NMDC maintains extension-specific environmental triad value sets as LinkML enumerations in submission-schema, created via expert voting workflow.**
-
-### Key Design Choices
-
-1. **LinkML enumerations** in submission-schema are the authoritative source for value sets
-2. **Extension-specific value sets**: Separate enumerations per extension × slot (12 total: 4 extensions × 3 slots)
-3. **Multi-ontology support**: Enumerations include ENVO, PO, and UBERON terms as appropriate
-4. **Non-restrictive validation**: Data Harmonizer accepts enumerated values OR regex-matching strings (`label [CURIE]` format), allowing valid ontology terms not yet added to enumerations
-5. **Expert voting workflow**: Query-seeded candidates reviewed by domain experts
-
-### Enumeration Naming Pattern
+## Enumeration Naming Pattern
 
 ```
 Env[Scale][Extension]Enum
@@ -160,16 +148,9 @@ Examples: `EnvBroadScaleSoilEnum`, `EnvLocalScaleWaterEnum`, `EnvMediumPlantAsso
 
 ### Currently Implemented Extensions
 
-| Extension | env_broad_scale | env_local_scale | env_medium |
-|-----------|-----------------|-----------------|------------|
-| Soil | EnvBroadScaleSoilEnum | EnvLocalScaleSoilEnum | EnvMediumSoilEnum |
-| Water | EnvBroadScaleWaterEnum | EnvLocalScaleWaterEnum | EnvMediumWaterEnum |
-| Sediment | EnvBroadScaleSedimentEnum | EnvLocalScaleSedimentEnum | EnvMediumSedimentEnum |
-| Plant-associated | EnvBroadScalePlantAssociatedEnum | EnvLocalScalePlantAssociatedEnum | EnvMediumPlantAssociatedEnum |
+Soil, Water, Sediment, Plant-associated (12 enumerations total: 4 extensions × 3 slots)
 
-Additional MIxS extensions (Air, Built environment, Host-associated, Hydrocarbon resources, Microbial mat/biofilm, Miscellaneous) do not yet have curated value sets. See [#79](https://github.com/microbiomedata/issues/issues/79) for planned expansion.
-
-**Important**: Value sets are maintained in **submission-schema**, not nmdc-schema. The submission-schema is the authoritative source for environmental triad enumerations.
+Additional MIxS extensions do not yet have curated value sets. See [#79](https://github.com/microbiomedata/issues/issues/79) for planned expansion.
 
 ---
 
@@ -190,9 +171,9 @@ Additional MIxS extensions (Air, Built environment, Host-associated, Hydrocarbon
 - **NMDC-specific artifacts**: Value sets are not discoverable via OLS/BioPortal ontology browsers
 - **Documentation gaps**: GitHub Pages needs improvements for download and navigation (see Distribution Improvements Needed above)
 
-### Neutral
+### Positive (continued)
 
-- **Reuse by other projects**: Other projects can access value sets via submission-schema GitHub releases or GitHub Pages documentation, but not via standard ontology distribution channels
+- **Reusable by other projects**: Other projects can access value sets via submission-schema GitHub releases or GitHub Pages documentation
 
 ---
 
@@ -216,18 +197,7 @@ Additional MIxS extensions (Air, Built environment, Host-associated, Hydrocarbon
 
 1. **Request ENVO deprecate NMDC subset annotation properties**
 
-   The following annotation properties should be deprecated in ENVO since NMDC will no longer maintain them:
-   - `ENVO:03605010` - NMDC environmental context subsets (root)
-   - `ENVO:03605013` - Terrestrial biomes
-   - `ENVO:03605014` - Environmental features (terrestrial)
-   - `ENVO:03605015` - Soil types
-   - `ENVO:03605017` - Aquatic biomes
-   - `ENVO:03605018` - Environmental features (aquatic)
-   - `ENVO:03605019` - Water types
-
-   **Rationale**: These properties were created for NMDC's use but are no longer being maintained. Leaving them in ENVO without active maintenance creates confusion and potential for stale data.
-
-   **Action**: Open issue in EnvironmentOntology/envo requesting deprecation.
+   Request deprecation of `ENVO:03605010` (NMDC environmental context subsets) and all its subproperties, as NMDC will no longer maintain them.
 
 2. **Archive ROBOT template generation code**
 
@@ -247,11 +217,9 @@ For the complete step-by-step workflow for creating and updating value sets, see
 
 **[Environmental Triad Value Set Lifecycle](https://github.com/microbiomedata/external-metadata-awareness/blob/main/docs/environmental-triad-value-set-lifecycle.md)** in the external-metadata-awareness repository.
 
-That document covers:
-- Voting sheet generation from biosample data
-- Expert voting process
-- Vote processing and schema integration
-- Adding new environments
+### Note on Current Vote Processing
+
+The existing 12 value sets were created using one-off Jupyter notebooks with varied approaches. In some cases (e.g., soil env_medium, soil env_broad_scale), the ontology structure was sufficient for query-only selection without expert voting. Future iterations should standardize vote processing where voting is used. See the lifecycle document for details.
 
 ---
 
@@ -284,12 +252,3 @@ That document covers:
 - [submission-schema](https://github.com/microbiomedata/submission-schema) - Authoritative source for value sets
 - [Environmental Triad Value Set Lifecycle](https://github.com/microbiomedata/external-metadata-awareness/blob/main/docs/environmental-triad-value-set-lifecycle.md) - Implementation guide
 
----
-
-## Changelog
-
-| Date | Change | Author |
-|------|--------|--------|
-| 2024-08-28 | Initial draft (0015-env-triad-structure.md) | Montana Smith, Mark Miller |
-| 2024-08-28 | Alternative draft (0015-env-triad-terms.md) | Montana Smith, Mark Miller |
-| 2026-01-26 | Consolidated and updated to reflect operational reality, formalized ENVO discontinuation | Mark Miller |
