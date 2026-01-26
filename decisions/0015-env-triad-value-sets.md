@@ -46,7 +46,7 @@ This ADR documents the **current operational approach** and formalizes the **dec
 
 **Approach**: Use large language models to identify appropriate environmental terms.
 
-**Why rejected**: Complex, expensive, non-reproducible results.
+**Why rejected**: Complex, financially expensive, non-reproducible results.
 
 #### Option C: Query-Seeded Expert Voting (Selected)
 
