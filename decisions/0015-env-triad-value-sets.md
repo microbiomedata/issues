@@ -111,20 +111,6 @@ From August 2024 through August 2025, NMDC attempted to publish value sets by in
 - LinkML enumerations directly enforce validation in Data Harmonizer
 - Follows the "Application Profile" pattern common in semantic web work
 
-### Distribution Improvements Needed
-
-The current submission-schema GitHub Pages documentation provides basic access to value sets but needs improvements for practical reuse:
-
-1. **Downloadable formats**: Add mechanisms for visitors to download individual enumerations or grouped value sets as TSV, YAML, or other formats. Currently, users must navigate to raw files in the repository.
-
-2. **Navigation between grouping and leaf pages**: Improve ability to navigate between:
-   - Grouping pages (e.g., all soil enumerations, all env_broad_scale enumerations)
-   - Individual enumeration pages (e.g., EnvBroadScaleSoilEnum)
-
-   The current [NmdcEnvTriadEnums](https://microbiomedata.github.io/submission-schema/NmdcEnvTriadEnums/) index page is mostly empty and doesn't effectively organize the 12 enumerations.
-
-3. **Persistent URLs**: Configure w3id.org namespace for submission-schema to provide stable, citable URLs for value sets independent of GitHub infrastructure.
-
 ---
 
 ## Enumeration Naming Pattern
@@ -158,7 +144,7 @@ Additional MIxS extensions do not yet have curated value sets. See [#79](https:/
 - **Maintenance overhead**: Voting workflow requires periodic updates as ontologies evolve
 - **Multi-repository coordination**: Workflow spans external-metadata-awareness (voting sheet generation) and submission-schema (schema integration)
 - **NMDC-specific artifacts**: Value sets are not discoverable via OLS/BioPortal ontology browsers
-- **Documentation gaps**: GitHub Pages needs improvements for download and navigation (see Distribution Improvements Needed above)
+- **Documentation gaps**: GitHub Pages needs improvements for download and navigation (see Action Item #3)
 
 ### Positive (continued)
 
