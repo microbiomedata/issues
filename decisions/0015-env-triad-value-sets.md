@@ -1,18 +1,13 @@
-# ADR-0015: NMDC Environmental Triad Value Sets
-
-**Status**: Accepted
-
-**Date**: 2026-01-26
-
-**Supersedes**: Previous draft ADR-0015 versions (0015-env-triad-structure.md, 0015-env-triad-terms.md)
-
-**Deciders**: Mark Miller, Montana Smith, Sierra Moxon, Chris Mungall
-
-**Consulted**: Lee Ann McCue, Natalie Winans
-
-**Informed**: NMDC Data Team
-
 ---
+status: accepted
+date: 2026-01-26
+deciders: Mark Miller, Montana Smith, Sierra Moxon, Chris Mungall
+consulted: Lee Ann McCue, Natalie Winans
+informed: NMDC Data Team
+supersedes: 0015-env-triad-structure.md, 0015-env-triad-terms.md
+---
+
+# ADR-0015: NMDC Environmental Triad Value Sets
 
 ## Context and Problem Statement
 
@@ -23,13 +18,7 @@ NMDC needed a sustainable approach to:
 2. Maintain these value sets as ontologies evolve
 3. Distribute value sets for validation in the NMDC Submission Portal (Data Harmonizer)
 
-### Evolution of This ADR
-
-This ADR consolidates and supersedes two previous draft files that were never finalized:
-- `0015-env-triad-structure.md` (merged to main via PR #881, Aug 2024)
-- `0015-env-triad-terms.md` (remained in unmerged branches until recently)
-
-Neither was complete, and the operational workflow evolved differently than either described. This ADR documents the **current operational approach** and formalizes the **decision to discontinue ENVO subset integration**.
+This ADR documents the **current operational approach** and formalizes the **decision to discontinue ENVO subset integration**.
 
 ---
 
