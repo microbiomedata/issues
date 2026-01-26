@@ -54,7 +54,7 @@ This ADR documents the **current operational approach** and formalizes the **dec
 
 **Why selected**:
 - Combines systematic term discovery with domain expertise
-- Vote sums provide reproducible inclusion criteria (IAA scores available for additional analysis if needed)
+- Vote sums provide reproducible inclusion criteria (inter-annotator agreement (IAA) scores available for additional analysis if needed)
 - Handles edge cases that automated rules cannot address
 - Allows incorporation of evidence from multiple biosample databases
 
