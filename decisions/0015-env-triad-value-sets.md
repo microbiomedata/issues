@@ -131,6 +131,7 @@ Additional MIxS extensions do not yet have curated value sets. See [#79](https:/
 - **Multi-ontology coherence**: Single enumeration can combine ENVO + PO + UBERON terms appropriately
 - **Decoupled releases**: Value set updates ship with submission-schema releases, not blocked by ontology release cycles
 - **Reproducible curation**: Voting workflow with vote sums provides audit trail
+- **Reusable by other projects**: Other projects can access value sets via submission-schema GitHub releases or GitHub Pages documentation
 
 ### Negative
 
@@ -138,10 +139,6 @@ Additional MIxS extensions do not yet have curated value sets. See [#79](https:/
 - **Multi-repository coordination**: Workflow spans external-metadata-awareness (voting sheet generation) and submission-schema (schema integration)
 - **NMDC-specific artifacts**: Value sets are not discoverable via OLS/BioPortal ontology browsers
 - **Documentation gaps**: GitHub Pages needs improvements for download and navigation (see Action Item #3)
-
-### Positive (continued)
-
-- **Reusable by other projects**: Other projects can access value sets via submission-schema GitHub releases or GitHub Pages documentation
 
 ---
 
