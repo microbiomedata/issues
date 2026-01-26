@@ -156,7 +156,7 @@ Additional MIxS extensions do not yet have curated value sets. See [#79](https:/
 
 - [x] Implement LinkML enumerations for 4 extensions × 3 slots (12 enums) in submission-schema
 - [x] Establish voting workflow with Google Sheets
-- [x] Document workflow in external-metadata-awareness (see [Environmental Triad Value Set Lifecycle](https://github.com/microbiomedata/external-metadata-awareness/blob/main/docs/environmental-triad-value-set-lifecycle.md))
+- [x] Document workflow in external-metadata-awareness
 
 ### Proposed
 
@@ -215,5 +215,4 @@ The existing 12 value sets were created using one-off Jupyter notebooks with var
 - [ENVO-MIxS Guidelines](https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS)
 - [LinkML Enumerations](https://linkml.io/linkml-model/latest/docs/EnumDefinition/)
 - [submission-schema](https://github.com/microbiomedata/submission-schema) - Authoritative source for value sets
-- [Environmental Triad Value Set Lifecycle](https://github.com/microbiomedata/external-metadata-awareness/blob/main/docs/environmental-triad-value-set-lifecycle.md) - Implementation guide
 
