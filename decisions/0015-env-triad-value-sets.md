@@ -11,7 +11,7 @@ supersedes: 0015-env-triad-structure.md, 0015-env-triad-terms.md
 
 ## Context and Problem Statement
 
-MIxS defines three environmental context slots (`env_broad_scale`, `env_local_scale`, `env_medium`) that NMDC requires for all Biosamples. These are informally called the "environmental triad" by NMDC staff. Without curated value sets, submitters must identify appropriate terms from ENVO's ~215 biomes, ~5,040 environmental materials, and ~1,770 astronomical body parts—covering most of ENVO's ~6,900 classes. This creates cognitive burden and inconsistent term selection across studies.
+MIxS defines three environmental context slots (`env_broad_scale`, `env_local_scale`, `env_medium`) that NMDC requires for all Biosamples. These are formally defined as the ["environmental triad"](https://microbiomedata.github.io/nmdc-schema/mixs_env_triad_field/) in nmdc-schema. Without curated value sets, submitters must identify appropriate terms from ENVO's ~215 biomes, ~5,040 environmental materials, and ~1,770 astronomical body parts—covering most of ENVO's ~6,900 classes. This creates cognitive burden and inconsistent term selection across studies.
 
 NMDC needed a sustainable approach to:
 1. Create curated value sets for different sample types (soil, water, sediment, plant-associated)
