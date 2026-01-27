@@ -11,20 +11,15 @@ supersedes: 0015-env-triad-structure.md, 0015-env-triad-terms.md
 
 ## Context and Problem Statement
 
-MIxS defines three environmental context slots (`env_broad_scale`, `env_local_scale`, `env_medium`) that NMDC requires for all Biosamples. These are formally defined as the ["environmental triad"](https://microbiomedata.github.io/nmdc-schema/mixs_env_triad_field/) in nmdc-schema. Without curated value sets, submitters must identify appropriate terms from ENVO's ~215 biomes, ~5,040 environmental materials, and ~1,770 astronomical body parts—covering most of ENVO's ~6,900 classes. This creates cognitive burden and inconsistent term selection across studies.
+MIxS defines three environmental context slots (`env_broad_scale`, `env_local_scale`, `env_medium`) that NMDC requires for all Biosamples. Without curated value sets, submitters must navigate ENVO's ~6,900 classes to find appropriate terms, creating cognitive burden and inconsistent term selection across studies.
 
-NMDC needed a sustainable approach to:
-1. Create curated value sets for different sample types (soil, water, sediment, plant-associated)
-2. Maintain these value sets as ontologies evolve
-3. Distribute value sets for validation in the NMDC Submission Portal (Data Harmonizer)
-
-This ADR documents the **current operational approach** and formalizes the **decision to discontinue ENVO subset integration**.
+NMDC needed a sustainable approach to create, maintain, and distribute curated value sets for different sample types (soil, water, sediment, plant-associated).
 
 ---
 
 ## Decision Drivers
 
-1. **Submitter experience**: Curated dropdown lists reduce cognitive burden vs. open ontology navigation
+1. **Submitter experience**: Curated dropdowns reduce cognitive burden vs. open ontology navigation
 2. **Data consistency**: Constrained choices enable grouping similar samples across studies
 3. **Multi-ontology requirements**: Value sets include ENVO, Plant Ontology (PO), and UBERON terms
 4. **Maintenance sustainability**: Workflow must be reproducible without excessive coordination overhead
@@ -32,180 +27,62 @@ This ADR documents the **current operational approach** and formalizes the **dec
 
 ---
 
-## Decision 1: Value Set Creation Approach
+## Considered Options
 
-### Considered Options
+### Value Set Creation
+- **Option A: Pure OAK Queries** — Rejected: produced value sets too large; no mechanism for expert judgment
+- **Option B: LLM-Based Discovery** — Rejected: complex, expensive, non-reproducible
+- **Option C: Query-Seeded Expert Voting** — Selected
 
-#### Option A: Pure OAK Queries (Rejected)
-
-**Approach**: Use automated ontology queries based on MIxS rules (e.g., "all subclasses of biome minus aquatic biome for soil").
-
-**Why rejected**: Produced value sets too large for practical use. No mechanism to incorporate domain expert judgment about term appropriateness.
-
-#### Option B: LLM-Based Discovery (Rejected)
-
-**Approach**: Use large language models to identify appropriate environmental terms.
-
-**Why rejected**: Complex, financially expensive, non-reproducible results.
-
-#### Option C: Query-Seeded Expert Voting (Selected)
-
-**Approach**: Use OAK queries to seed candidate term lists from empirical data (NCBI, GOLD, NMDC biosamples), then have domain experts vote on inclusion.
-
-**Why selected**:
-- Combines systematic term discovery with domain expertise
-- Vote sums provide reproducible inclusion criteria (inter-annotator agreement (IAA) scores available for additional analysis if needed)
-- Handles edge cases that automated rules cannot address
-- Allows incorporation of evidence from multiple biosample databases
-
-### Decision Outcome: Value Set Creation
-
-**NMDC will create value sets via a query-seeded expert voting workflow.** OAK queries against biosample databases generate candidate terms, which domain experts review and vote on for inclusion. Terms meeting vote threshold (typically vote_sum ≥ 1) are included in value sets.
-
-### Note on "Cherry-Picking"
-
-The original ADR (Aug 2024) established a "no cherry-picking" principle ([#844](https://github.com/microbiomedata/issues/issues/844)): specific terms should not be individually removed; elimination must always be done via general query changes.
-
-This principle was relaxed because no purely query-based approach produced usable value sets. The voting workflow effectively cherry-picks terms, but does so through systematic, reproducible curation with documented rationale (vote sums, expert consensus).
+### Value Set Publication
+- **Option A: ENVO Subset Integration** — Rejected after year-long attempt (see [historical context](https://github.com/microbiomedata/external-metadata-awareness/blob/main/docs/env-triad-envo-integration-history.md))
+- **Option B: Self-Published LinkML Enumerations** — Selected
 
 ---
 
-## Decision 2: Value Set Publication and Distribution
+## Decision Outcome
 
-### Background: ENVO Subset Integration Attempt
+### Decision 1: Value Set Creation
 
-From August 2024 through August 2025, NMDC attempted to publish value sets by injecting `oboInOwl:inSubset` annotations into ENVO via ROBOT templates. This would have enabled tools like OLS/BioPortal to query NMDC subsets directly from ENVO releases.
+**NMDC will create value sets via a query-seeded expert voting workflow.** OAK queries against biosample databases generate candidate terms, which domain experts review and vote on for inclusion. Terms meeting vote threshold (typically vote_sum ≥ 1) are included.
 
-**Implementation details**:
-- Created ROBOT template (`nmdc_env_context_subset_membership.tsv`) mapping ENVO terms to NMDC subset IDs
-- Defined subset annotation properties in ENVO: `ENVO:03605010` (NMDC environmental context subsets) and its sub-properties
-- Integrated into ENVO Makefile build process
+### Decision 2: Value Set Publication
 
-**Why ENVO integration was abandoned**:
+**NMDC will self-publish value sets as LinkML enumerations in [submission-schema](https://github.com/microbiomedata/submission-schema).**
 
-1. **Technical fragility**: The Aug 2025 ENVO release (v2025-08-19) accidentally dropped all NMDC subset annotations. The multi-step ODK build process has many failure points with silent failures (build succeeds even when annotations are missing).
-
-2. **Architectural limitation (fundamental)**: NMDC value sets contain terms from multiple ontologies:
-   - ENVO terms (environmental contexts)
-   - PO terms (plant anatomical structures for plant-associated samples)
-   - UBERON terms (animal anatomical structures for host-associated samples)
-
-   ENVO can only annotate ENVO terms. Publishing complete NMDC value sets via ENVO subsets is architecturally impossible without coordinating with PO and UBERON maintainers to import NMDC subset definitions into each ontology.
-
-3. **Release coupling**: NMDC value set updates required waiting for ENVO releases, introducing delays and coordination overhead.
-
-### Decision Outcome: Value Set Publication
-
-**NMDC will self-publish value sets as LinkML enumerations in [submission-schema](https://github.com/microbiomedata/submission-schema) and discontinue ENVO subset integration.**
-
-**Why self-publishing was selected**:
-- Supports multi-ontology value sets (ENVO + PO + UBERON) in single coherent definitions
-- Decoupled from upstream ontology release cycles
-- LinkML enumerations directly enforce validation in Data Harmonizer
+This approach:
+- Supports multi-ontology value sets (ENVO + PO + UBERON) in single definitions
+- Decouples from upstream ontology release cycles
+- Enables direct validation in Data Harmonizer
 - Follows the "Application Profile" pattern common in semantic web work
 
----
+### Decision 3: Discontinue ENVO Subset Integration
 
-## Enumeration Naming Pattern
-
-```
-Env[Scale][Extension]Enum
-```
-
-Examples: `EnvBroadScaleSoilEnum`, `EnvLocalScaleWaterEnum`, `EnvMediumPlantAssociatedEnum`
-
-### Currently Implemented Extensions
-
-Soil, Water, Sediment, Plant-associated (12 enumerations total: 4 extensions × 3 slots)
-
-Additional MIxS extensions do not yet have curated value sets. See [#79](https://github.com/microbiomedata/issues/issues/79) for planned expansion.
+**NMDC will discontinue maintaining ENVO subset annotations** and request deprecation of `ENVO:03605010` and its subproperties.
 
 ---
 
 ## Consequences
 
 ### Positive
-
-- **Reduced cognitive burden**: Submitters see curated dropdown choices instead of navigating ontology hierarchies
-- **Improved data consistency**: Constrained choices enable better grouping and querying of similar samples
-- **Multi-ontology coherence**: Single enumeration can combine ENVO + PO + UBERON terms appropriately
-- **Decoupled releases**: Value set updates ship with submission-schema releases, not blocked by ontology release cycles
-- **Reproducible curation**: Voting workflow with vote sums provides audit trail
-- **Reusable by other projects**: Other projects can access value sets via submission-schema GitHub releases or GitHub Pages documentation
+- Reduced cognitive burden for submitters via curated dropdowns
+- Improved data consistency across studies
+- Multi-ontology coherence in single enumerations
+- Decoupled release cycles
+- Reproducible curation with audit trail (vote sums)
 
 ### Negative
-
-- **Maintenance overhead**: Voting workflow requires periodic updates as ontologies evolve
-- **Multi-repository coordination**: Workflow spans external-metadata-awareness (voting sheet generation) and submission-schema (schema integration)
-- **NMDC-specific artifacts**: Value sets are not discoverable via OLS/BioPortal ontology browsers
-- **Documentation gaps**: GitHub Pages needs improvements for download and navigation (see Action Item #3)
+- Maintenance overhead for periodic voting workflow updates
+- Multi-repository coordination (external-metadata-awareness → submission-schema)
+- Value sets not discoverable via OLS/BioPortal
 
 ---
 
-## Maintenance
+## More Information
 
-- **Triggers for updates**: New extension support requested, community feedback on missing terms, significant ontology releases
-- **Responsibility**: Metadata team with domain expert consultation
-- **Cadence**: As needed; no fixed schedule
-
----
-
-## Action Items
-
-### Completed
-
-- [x] Implement LinkML enumerations for 4 extensions × 3 slots (12 enums) in submission-schema
-- [x] Establish voting workflow with Google Sheets
-- [x] Document workflow in external-metadata-awareness
-
-### Proposed
-
-1. **Request ENVO deprecate NMDC subset annotation properties**
-
-   Request deprecation of `ENVO:03605010` (NMDC environmental context subsets) and all its subproperties, as NMDC will no longer maintain them.
-
-2. **Archive ROBOT template generation code**
-
-   The `create_env_context_robot_template.py` script in submission-schema should be archived or removed, with documentation noting it represents a deprecated approach.
-
-3. **Improve value set accessibility** (Issues #1351, #1352, #1353, submission-schema#392)
-   - Add TSV/YAML download buttons to enumeration documentation pages
-   - Fix NmdcEnvTriadEnums index page to properly organize and link enumerations
-   - Improve navigation between grouping pages and individual enumeration pages
-   - Configure w3id.org namespace for submission-schema persistent URLs
-
----
-
-## Implementation Details
-
-For the complete step-by-step workflow for creating and updating value sets, see:
-
-**[Environmental Triad Value Set Lifecycle](https://github.com/microbiomedata/external-metadata-awareness/blob/main/docs/environmental-triad-value-set-lifecycle.md)** in the external-metadata-awareness repository.
-
-### Note on Current Vote Processing
-
-The existing 12 value sets were created using one-off Jupyter notebooks with varied approaches. In some cases (e.g., soil env_medium, soil env_broad_scale), the ontology structure was sufficient for query-only selection without expert voting. Future iterations should standardize vote processing where voting is used. See the lifecycle document for details.
-
----
-
-## Related Issues and Discussions
-
-### microbiomedata/issues
-- [#846](https://github.com/microbiomedata/issues/issues/846) - Document policies for each env triad term v2
-- [#844](https://github.com/microbiomedata/issues/issues/844) - Evaluate OAK success for SOIL curated terms
-- [#1138](https://github.com/microbiomedata/issues/issues/1138) - Add sediment PVs to ENVO subsets
-- [#1351](https://github.com/microbiomedata/issues/issues/1351) - Create summarizing doc page
-- [#1352](https://github.com/microbiomedata/issues/issues/1352) - Add TSV download buttons
-- [#1353](https://github.com/microbiomedata/issues/issues/1353) - Configure w3id.org redirects
-- [#1354](https://github.com/microbiomedata/issues/issues/1354) - Work with Pier to get PO/UBERON terms to ENVO (closed - no longer pursuing)
-- [#502](https://github.com/microbiomedata/issues/issues/502) - Milestone: Harmonizing environmental science standards
-- [#468](https://github.com/microbiomedata/issues/issues/468) - Milestone: Define EnvO value sets
-
-### EnvironmentOntology/envo
-- [#1642](https://github.com/EnvironmentOntology/envo/issues/1642) - NMDC value sets disappeared from 2025-08-19 release
-
-### microbiomedata/submission-schema
-- [#392](https://github.com/microbiomedata/submission-schema/issues/392) - w3id.org namespace configuration
+- **Workflow documentation**: [Environmental Triad Value Set Lifecycle](https://github.com/microbiomedata/external-metadata-awareness/blob/main/docs/environmental-triad-value-set-lifecycle.md)
+- **Historical context and action items**: [ENVO Integration History](https://github.com/microbiomedata/external-metadata-awareness/blob/main/docs/env-triad-envo-integration-history.md)
+- **Key issues**: [#846](https://github.com/microbiomedata/issues/issues/846), [#844](https://github.com/microbiomedata/issues/issues/844), [#1351](https://github.com/microbiomedata/issues/issues/1351)
 
 ---
 
@@ -214,5 +91,3 @@ The existing 12 value sets were created using one-off Jupyter notebooks with var
 - [MIxS Standard](https://genomicsstandardsconsortium.github.io/mixs/)
 - [ENVO-MIxS Guidelines](https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS)
 - [LinkML Enumerations](https://linkml.io/linkml-model/latest/docs/EnumDefinition/)
-- [submission-schema](https://github.com/microbiomedata/submission-schema) - Authoritative source for value sets
-
