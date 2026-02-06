@@ -21,7 +21,7 @@ NMDC needed a sustainable approach to create, maintain, and distribute curated v
 
 1. **Submitter experience**: Curated dropdowns reduce cognitive burden vs. open ontology navigation
 2. **Data consistency**: Constrained choices enable grouping similar samples across studies
-3. **Multi-ontology requirements**: Value sets include ENVO, Plant Ontology (PO), and UBERON terms
+3. **Multi-ontology requirements**: Value sets include The Environment Ontology (ENVO), Plant Ontology (PO), and Uber-anatomy ontology (UBERON) terms
 4. **Maintenance sustainability**: Workflow must be reproducible without excessive coordination overhead
 5. **Timely updates**: NMDC release cycles should not depend on upstream ontology releases
 
