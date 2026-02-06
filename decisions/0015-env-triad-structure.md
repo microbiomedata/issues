@@ -1,11 +1,15 @@
 ---
-status: proposed / in progress
+status: deprecated
 date: 2024-08-28
 deciders: Montana Smith, Mark Miller, Sierra Moxen
 consulted: Lee Ann McCue, Natalie Winans
-informed: 
+informed:
+superseded_by: 0015-env-triad-value-sets.md
 ---
-# Establishing valid terms for MIxS Environmental Triad 
+
+> **DEPRECATED**: This ADR has been superseded by [ADR-0015: NMDC Environmental Triad Value Sets](0015-env-triad-value-sets.md), which consolidates this document and `0015-env-triad-terms.md` into a single accepted decision record.
+
+# Establishing valid terms for MIxS Environmental Triad
 
 ## Context and Problem Statement
 
